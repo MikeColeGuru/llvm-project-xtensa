@@ -7,7 +7,7 @@ define <1 x i1> @test_spill(<1 x i1> %b0, <1 x i1> %b1)
   ; CHECK: s8i {{a[0-9]+}}
   ; CHECK: callx8 a8
   %b2 = call <1 x i1> @get_xtbool()
-  
+
   ; CHECK: l8ui {{a[0-9]+}}
   ; CHECK: rsr {{a[0-9]+}}, br
   ; CHECK: wsr {{a[0-9]+}}, br

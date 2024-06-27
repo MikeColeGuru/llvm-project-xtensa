@@ -22,14 +22,14 @@ class Immediate<ValueType vt, code pred, string asmop>
 }
 
 class ImmediateRanged<int Low, int High, int Step, string asmop> :
-  Immediate<i32, 
-  " return Imm >= " # Low # " && Imm <= " # High # " && (Imm % " # Step # " ) == 0;", 
+  Immediate<i32,
+  " return Imm >= " # Low # " && Imm <= " # High # " && (Imm % " # Step # " ) == 0;",
   asmop> {
   let PrintMethod = "printImmOperand<" # Low #"," # High # "," # Step # ">";
   }
 
-class ImmRangedAsmOperand<int Low, int High, int Step,string name> : 
-  ImmAsmOperand<name> { 
+class ImmRangedAsmOperand<int Low, int High, int Step,string name> :
+  ImmAsmOperand<name> {
   let PredicateMethod = "isImmInRange<" # Low #"," # High # "," # Step # ">";
 }
 

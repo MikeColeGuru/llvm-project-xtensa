@@ -29,10 +29,10 @@ class ArithLogic_RRR<bits<4> oper2, bits<4> oper1, string instrAsm,
   let isReMaterializable = 0;
 }
 
-class Arith_Pat<ValueType res_vt, RegisterClass op_vt, 
+class Arith_Pat<ValueType res_vt, RegisterClass op_vt,
                 SDPatternOperator opNode, Instruction inst>
   : Pat<(res_vt (opNode op_vt:$r, op_vt:$t)),
-          (inst op_vt:$r, op_vt:$t)>; 
+          (inst op_vt:$r, op_vt:$t)>;
 
 def ADD : ArithLogic_RRR<0x08, 0x00, "add", add, 1>;
 def SUB : ArithLogic_RRR<0x0C, 0x00, "sub", sub>;
@@ -141,7 +141,7 @@ let Defs = [SAR] in {
   }
 
   def SSR : RRR_Inst<0x00, 0x00, 0x04, (outs), (ins AR:$s),
-                    "ssr\t$s", 
+                    "ssr\t$s",
                     [(Xtensa_ssr AR:$s)]> {
     let r = 0x00;
     let t = 0x00;
@@ -215,7 +215,7 @@ let usesCustomInserter = 1 in {
   def SLL_P : Pseudo<(outs AR:$r), (ins AR:$s, AR:$sa),
                     "# SLL_P $r, $s, $sa",
                     [(set AR:$r, (shl AR:$s, AR:$sa))]>;
- 
+
   def SRA_P : Pseudo<(outs AR:$r), (ins AR:$t, AR:$sa),
                     "# SRA_P $r, $t, $sa",
                     [(set AR:$r, (sra AR:$t, AR:$sa))]>;
@@ -715,7 +715,7 @@ let usesCustomInserter = 1 in {
 // Code Density instructions
 //===----------------------------------------------------------------------===//
 
-class ArithLogic_RRRN<bits<4> oper0, string instrAsm, 
+class ArithLogic_RRRN<bits<4> oper0, string instrAsm,
       SDPatternOperator opNode, bit isComm = 0>
   : RRRN_Inst<oper0, (outs AR:$r), (ins AR:$s, AR:$t),
               instrAsm#"\t$r, $s, $t",
@@ -749,7 +749,7 @@ def : InstAlias<"_movi.n\t$s, $imm7", (MOVI_N AR:$s, imm32n_95:$imm7)>;
 
 // Load instruction
 let mayLoad = 1, usesCustomInserter = 1 in {
-  def L32I_N : RRRN_Inst<0x8, (outs AR:$t), (ins mem32n:$addr), 
+  def L32I_N : RRRN_Inst<0x8, (outs AR:$t), (ins mem32n:$addr),
                         "l32i.n\t$t, $addr", []>, Requires<[HasDensity]> {
     bits<8> addr;
 
@@ -785,7 +785,7 @@ let isReturn = 1, isTerminator = 1,
 // Windowed instructions
 //===----------------------------------------------------------------------===//
 
-def ENTRY : BRI12_Inst<0x06, 0x3, 0x0, (outs), (ins AR:$s, entry_imm12:$imm), 
+def ENTRY : BRI12_Inst<0x06, 0x3, 0x0, (outs), (ins AR:$s, entry_imm12:$imm),
                      "entry\t$s, $imm", []>, Requires<[HasWindowed]> {
   bits<15> imm;
 
@@ -810,21 +810,21 @@ let isCall = 1, Defs = [A0] in {
     let n = 3;
   }
 
-  def CALLX4 : CALLX_Inst<0x00, 0x00, 0x00, (outs), (ins AR:$s), 
+  def CALLX4 : CALLX_Inst<0x00, 0x00, 0x00, (outs), (ins AR:$s),
                          "callx4\t$s", []>, Requires<[HasWindowed]> {
     let m = 0x3;
     let n = 0x1;
     let r = 0;
   }
 
-  def CALLX8 : CALLX_Inst<0x00, 0x00, 0x00, (outs), (ins AR:$s), 
+  def CALLX8 : CALLX_Inst<0x00, 0x00, 0x00, (outs), (ins AR:$s),
                          "callx8\t$s", []>, Requires<[HasWindowed]> {
     let m = 0x3;
     let n = 0x2;
     let r = 0;
   }
 
-  def CALLX12 : CALLX_Inst<0x00, 0x00, 0x00, (outs), (ins AR:$s), 
+  def CALLX12 : CALLX_Inst<0x00, 0x00, 0x00, (outs), (ins AR:$s),
                           "callx12\t$s", []>, Requires<[HasWindowed]> {
     let m = 0x3;
     let n = 0x3;
@@ -920,7 +920,7 @@ def ROTW : RRR_Inst<0x00, 0x00, 0x04, (outs), (ins imm8n_7:$imm),
 // Boolean Instructions
 //===----------------------------------------------------------------------===//
 class BIN_PAT<SDPatternOperator node, Instruction inst,
-  ValueType src_vt, ValueType dst_vt = src_vt> 
+  ValueType src_vt, ValueType dst_vt = src_vt>
   : Pat<(dst_vt (node src_vt:$f1, src_vt:$f2)),
         (inst src_vt:$f1, src_vt:$f2)>;
 
@@ -957,25 +957,25 @@ def ANY8 : RRR_Inst<0x00, 0x00, 0x00, (outs BR:$t), (ins BR:$s),
 }
 
 let isBranch = 1, isTerminator = 1, Predicates = [HasBoolean] in {
-  def BT : RRI8_Inst<0x06, (outs), (ins BR:$b, brtarget:$target), 
+  def BT : RRI8_Inst<0x06, (outs), (ins BR:$b, brtarget:$target),
                     "bt\t$b, $target", []> {
     bits<8> target;
     bits<4> b;
 
     let r = 0x1;
     let s = b;
-    let t = 0x7; 
+    let t = 0x7;
     let imm8 = target;
   }
 
-  def BF : RRI8_Inst<0x06, (outs), (ins BR:$b, brtarget:$target), 
+  def BF : RRI8_Inst<0x06, (outs), (ins BR:$b, brtarget:$target),
                     "bf\t$b, $target", []> {
     bits<8> target;
     bits<4> b;
 
     let r = 0x0;
     let s = b;
-    let t = 0x7; 
+    let t = 0x7;
     let imm8 = target;
   }
 }
@@ -1001,12 +1001,12 @@ let Predicates = [HasBoolean] in {
   def : Pat<(v1i1 (vselect v1i1:$c, v1i1:$t, v1i1:$f)),
           (ORB (ANDB $t, $f), (ANDBC $f, $c))>;
 
-  
+
   def MOVBA_P2: Pseudo<(outs BR:$r, AR:$x, AR:$y), (ins AR:$s),
                         "!movba $r, $x, $y, $s", []> {
     let Defs = [BREG];
   }
-   
+
   def MOVBA_P: Pseudo<(outs BR:$r), (ins AR:$s),
                         "!movba $r, $s", []> {
     let usesCustomInserter = 1;
@@ -1017,24 +1017,24 @@ let Predicates = [HasBoolean] in {
                         "!movba $r, $x, $y, $s", []> {
     let Defs = [BREG];
   }
-   
+
   def MOVBA2_P: Pseudo<(outs BR2:$r), (ins AR:$s),
                         "!movba2 $r, $s", []> {
     let usesCustomInserter = 1;
     let Defs = [BREG];
   }
-    
+
   def MOVBA4_P2: Pseudo<(outs BR4:$r, AR:$x, AR:$y), (ins AR:$s),
                         "!movba4 $r, $x, $y, $s", []> {
     let Defs = [BREG];
   }
-   
+
   def MOVBA4_P: Pseudo<(outs BR4:$r), (ins AR:$s),
                         "!movba4 $r, $s", []> {
     let usesCustomInserter = 1;
     let Defs = [BREG];
   }
-  
+
   def EXTUI_BR_P: Pseudo<(outs AR:$r), (ins AR:$s, BR:$b),
                         "!extui_br $r, $s, $b", []>;
   def EXTUI_BR2_P: Pseudo<(outs AR:$r), (ins AR:$s, BR2:$b),
@@ -1046,13 +1046,13 @@ let Predicates = [HasBoolean] in {
 
   def : Pat<(v1i1 (build_vector AR:$a)), (MOVBA_P AR:$a)>;
   def : Pat<(v1i1 (scalar_to_vector AR:$a)), (MOVBA_P AR:$a)>;
-  
-  def : Pat<(v2i1 (build_vector AR:$a, AR:$b)), 
+
+  def : Pat<(v2i1 (build_vector AR:$a, AR:$b)),
              (MOVBA2_P (OR AR:$a, (SLLI AR:$b, (i32 1))))>;
-  
+
   def : Pat<(v2i1 (Xtensa_trunc AR:$s)), (MOVBA2_P AR:$s)>;
   def : Pat<(v4i1 (Xtensa_trunc AR:$s)), (MOVBA4_P AR:$s)>;
-  
+
   def : Pat<(i32 (vector_extract (v1i1 BR:$b), (i32 0))),
             (EXTUI_BR_P (RSR BREG), BR:$b)>;
   def : Pat<(v1i1 (load addr_ish1:$addr)), (MOVBA_P (L8UI mem8:$addr))>;
@@ -1825,8 +1825,8 @@ let usesCustomInserter = 1, Predicates = [HasS32C1I] in {
                                    [(set AR:$dst, (atomic_load_min_16 AR:$ptr, AR:$arg))]>;
   def ATOMIC_LOAD_MIN_32_P : Pseudo<(outs AR:$dst), (ins AR:$ptr, AR:$arg),
                                    "!atomic_load_min_32_p, $dst, $ptr, $arg",
-                                   [(set AR:$dst, (atomic_load_min_32 AR:$ptr, AR:$arg))]>;			
-										
+                                   [(set AR:$dst, (atomic_load_min_32 AR:$ptr, AR:$arg))]>;
+
   def ATOMIC_LOAD_MAX_8_P  : Pseudo<(outs AR:$dst), (ins AR:$ptr, AR:$arg),
                                    "!atomic_load_max_8_p, $dst, $ptr, $arg",
                                    [(set AR:$dst, (atomic_load_max_8 AR:$ptr, AR:$arg))]>;
@@ -1835,7 +1835,7 @@ let usesCustomInserter = 1, Predicates = [HasS32C1I] in {
                                    [(set AR:$dst, (atomic_load_max_16 AR:$ptr, AR:$arg))]>;
   def ATOMIC_LOAD_MAX_32_P : Pseudo<(outs AR:$dst), (ins AR:$ptr, AR:$arg),
                                    "!atomic_load_max_32_p, $dst, $ptr, $arg",
-                                   [(set AR:$dst, (atomic_load_max_32 AR:$ptr, AR:$arg))]>;	
+                                   [(set AR:$dst, (atomic_load_max_32 AR:$ptr, AR:$arg))]>;
 
   def ATOMIC_LOAD_UMIN_8_P  : Pseudo<(outs AR:$dst), (ins AR:$ptr, AR:$arg),
                                     "!atomic_load_umin_8_p, $dst, $ptr, $arg",
@@ -1845,8 +1845,8 @@ let usesCustomInserter = 1, Predicates = [HasS32C1I] in {
                                     [(set AR:$dst, (atomic_load_umin_16 AR:$ptr, AR:$arg))]>;
   def ATOMIC_LOAD_UMIN_32_P : Pseudo<(outs AR:$dst), (ins AR:$ptr, AR:$arg),
                                     "!atomic_load_umin_32_p, $dst, $ptr, $arg",
-                                    [(set AR:$dst, (atomic_load_umin_32 AR:$ptr, AR:$arg))]>;			
-										
+                                    [(set AR:$dst, (atomic_load_umin_32 AR:$ptr, AR:$arg))]>;
+
   def ATOMIC_LOAD_UMAX_8_P  : Pseudo<(outs AR:$dst), (ins AR:$ptr, AR:$arg),
                                     "!atomic_load_umax_8_p, $dst, $ptr, $arg",
                                     [(set AR:$dst, (atomic_load_umax_8 AR:$ptr, AR:$arg))]>;
@@ -1855,7 +1855,7 @@ let usesCustomInserter = 1, Predicates = [HasS32C1I] in {
                                     [(set AR:$dst, (atomic_load_umax_16 AR:$ptr, AR:$arg))]>;
   def ATOMIC_LOAD_UMAX_32_P : Pseudo<(outs AR:$dst), (ins AR:$ptr, AR:$arg),
                                     "!atomic_load_umax_32_p, $dst, $ptr, $arg",
-                                    [(set AR:$dst, (atomic_load_umax_32 AR:$ptr, AR:$arg))]>;	
+                                    [(set AR:$dst, (atomic_load_umax_32 AR:$ptr, AR:$arg))]>;
 }
 
 //===----------------------------------------------------------------------===//

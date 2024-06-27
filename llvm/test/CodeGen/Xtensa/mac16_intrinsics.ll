@@ -316,4 +316,3 @@ declare void @llvm.xtensa.wsr.m0(i32) nounwind
 declare void @llvm.xtensa.wsr.m1(i32) nounwind
 declare void @llvm.xtensa.wsr.m2(i32) nounwind
 declare void @llvm.xtensa.wsr.m3(i32) nounwind
-

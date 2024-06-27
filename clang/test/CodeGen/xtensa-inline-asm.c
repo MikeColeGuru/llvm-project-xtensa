@@ -10,4 +10,3 @@ void test_f() {
 // CHECK: call void asm sideeffect "", "f"(float [[FLT_ARG]])
   asm volatile ("" :: "f"(f));
 }
-

@@ -73,7 +73,7 @@ createXtensaMCSubtargetInfo(const Triple &TT, StringRef CPU, StringRef FS) {
     CPU = "esp32s3";
   return createXtensaMCSubtargetInfoImpl(TT, CPU, CPU, FS);
 }
- 
+
 static MCTargetStreamer *
 createXtensaAsmTargetStreamer(MCStreamer &S, formatted_raw_ostream &OS,
                               MCInstPrinter *InstPrint, bool isVerboseAsm) {

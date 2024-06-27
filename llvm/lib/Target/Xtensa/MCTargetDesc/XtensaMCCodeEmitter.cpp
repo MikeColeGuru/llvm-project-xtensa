@@ -752,7 +752,7 @@ XtensaMCCodeEmitter::getOffset_256_16OpValue(const MCInst &MI, unsigned OpNo,
 
   assert(((Res >= -2048) && (Res <= 2032) && ((Res & 0xf) == 0)) &&
          "Unexpected operand value!");
-  
+
   return Res / 16;
 }
 

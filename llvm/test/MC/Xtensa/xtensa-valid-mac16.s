@@ -29,7 +29,7 @@ LBL0:
 # CHECK-INST: mul.aa.hh	a2, a3
 # CHECK: encoding: [0x34,0x02,0x77]
 	mul.aa.hh	a2, a3
-	
+
 # CHECK-INST: mul.ad.ll	a2, m2
 # CHECK: encoding: [0x04,0x02,0x34]
 	mul.ad.ll	a2, m2
@@ -42,7 +42,7 @@ LBL0:
 # CHECK-INST: mul.ad.hh	a2, m2
 # CHECK: encoding: [0x04,0x02,0x37]
 	mul.ad.hh	a2, m2
-	
+
 # CHECK-INST: mul.da.ll	m1, a3
 # CHECK: encoding: [0x34,0x40,0x64]
 	mul.da.ll	m1, a3
@@ -55,7 +55,7 @@ LBL0:
 # CHECK-INST: mul.da.hh	m1, a3
 # CHECK: encoding: [0x34,0x40,0x67]
 	mul.da.hh	m1, a3
-	
+
 # CHECK-INST: mul.dd.ll	m1, m2
 # CHECK: encoding: [0x04,0x40,0x24]
 	mul.dd.ll	m1, m2
@@ -231,4 +231,3 @@ LBL0:
 # CHECK-INST: ldinc	 m0, a8
 # CHECK: encoding: [0x04,0x08,0x80]
 	ldinc	 m0, a8
-

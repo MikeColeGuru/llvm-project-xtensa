@@ -790,4 +790,3 @@ bool XtensaInstrInfo::isBranch(const MachineBasicBlock::iterator &MI,
     return false;
   }
 }
-

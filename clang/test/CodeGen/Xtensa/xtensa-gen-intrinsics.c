@@ -68,7 +68,7 @@ class F:
   fun : str
   args: [str]
   #builtin
-  #llvm_ret 
+  #llvm_ret
   #llvm_args
   #call_args
 
@@ -81,7 +81,7 @@ for f in FIXTURES:
     f.llvm_args = ", ".join(
                         [('%s {{.*}}' % ctype2llvm(a)) if isinstance(a,str) else ('i32 %d' % a)
                          for i,a, in enumerate(args)])
-    f.call_args = ", ".join(['a%d' % i if isinstance(a,str) else str(a) 
+    f.call_args = ", ".join(['a%d' % i if isinstance(a,str) else str(a)
                             for i,a in enumerate(args)])
     f.llvm_ret = ctype2llvm(f.ret)
     f.assign = '' if f.ret == 'void' else '{{.*}} ='

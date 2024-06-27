@@ -2723,12 +2723,12 @@
 // XTENSA: #define __FLT_MIN__ 1.17549435e-38F
 // XTENSA: #define __FLT_RADIX__ 2
 // XTENSA: #define __ILP32__ 1
-// XTENSA: #define __INT16_C_SUFFIX__ 
+// XTENSA: #define __INT16_C_SUFFIX__
 // XTENSA: #define __INT16_FMTd__ "hd"
 // XTENSA: #define __INT16_FMTi__ "hi"
 // XTENSA: #define __INT16_MAX__ 32767
 // XTENSA: #define __INT16_TYPE__ short
-// XTENSA: #define __INT32_C_SUFFIX__ 
+// XTENSA: #define __INT32_C_SUFFIX__
 // XTENSA: #define __INT32_FMTd__ "d"
 // XTENSA: #define __INT32_FMTi__ "i"
 // XTENSA: #define __INT32_MAX__ 2147483647
@@ -2738,7 +2738,7 @@
 // XTENSA: #define __INT64_FMTi__ "lli"
 // XTENSA: #define __INT64_MAX__ 9223372036854775807LL
 // XTENSA: #define __INT64_TYPE__ long long int
-// XTENSA: #define __INT8_C_SUFFIX__ 
+// XTENSA: #define __INT8_C_SUFFIX__
 // XTENSA: #define __INT8_FMTd__ "hhd"
 // XTENSA: #define __INT8_FMTi__ "hhi"
 // XTENSA: #define __INT8_MAX__ 127
@@ -2862,7 +2862,7 @@
 // XTENSA: #define __STDC_UTF_32__ 1
 // XTENSA: #define __STDC_VERSION__ 201710L
 // XTENSA: #define __STDC__ 1
-// XTENSA: #define __UINT16_C_SUFFIX__ 
+// XTENSA: #define __UINT16_C_SUFFIX__
 // XTENSA: #define __UINT16_FMTX__ "hX"
 // XTENSA: #define __UINT16_FMTo__ "ho"
 // XTENSA: #define __UINT16_FMTu__ "hu"
@@ -2883,7 +2883,7 @@
 // XTENSA: #define __UINT64_FMTx__ "llx"
 // XTENSA: #define __UINT64_MAX__ 18446744073709551615ULL
 // XTENSA: #define __UINT64_TYPE__ long long unsigned int
-// XTENSA: #define __UINT8_C_SUFFIX__ 
+// XTENSA: #define __UINT8_C_SUFFIX__
 // XTENSA: #define __UINT8_FMTX__ "hhX"
 // XTENSA: #define __UINT8_FMTo__ "hho"
 // XTENSA: #define __UINT8_FMTu__ "hhu"
@@ -3023,12 +3023,12 @@
 // XTENSA_FAST32: #define __FLT_MIN__ 1.17549435e-38F
 // XTENSA_FAST32: #define __FLT_RADIX__ 2
 // XTENSA_FAST32: #define __ILP32__ 1
-// XTENSA_FAST32: #define __INT16_C_SUFFIX__ 
+// XTENSA_FAST32: #define __INT16_C_SUFFIX__
 // XTENSA_FAST32: #define __INT16_FMTd__ "hd"
 // XTENSA_FAST32: #define __INT16_FMTi__ "hi"
 // XTENSA_FAST32: #define __INT16_MAX__ 32767
 // XTENSA_FAST32: #define __INT16_TYPE__ short
-// XTENSA_FAST32: #define __INT32_C_SUFFIX__ 
+// XTENSA_FAST32: #define __INT32_C_SUFFIX__
 // XTENSA_FAST32: #define __INT32_FMTd__ "d"
 // XTENSA_FAST32: #define __INT32_FMTi__ "i"
 // XTENSA_FAST32: #define __INT32_MAX__ 2147483647
@@ -3038,7 +3038,7 @@
 // XTENSA_FAST32: #define __INT64_FMTi__ "lli"
 // XTENSA_FAST32: #define __INT64_MAX__ 9223372036854775807LL
 // XTENSA_FAST32: #define __INT64_TYPE__ long long int
-// XTENSA_FAST32: #define __INT8_C_SUFFIX__ 
+// XTENSA_FAST32: #define __INT8_C_SUFFIX__
 // XTENSA_FAST32: #define __INT8_FMTd__ "hhd"
 // XTENSA_FAST32: #define __INT8_FMTi__ "hhi"
 // XTENSA_FAST32: #define __INT8_MAX__ 127
@@ -3162,7 +3162,7 @@
 // XTENSA_FAST32: #define __STDC_UTF_32__ 1
 // XTENSA_FAST32: #define __STDC_VERSION__ 201710L
 // XTENSA_FAST32: #define __STDC__ 1
-// XTENSA_FAST32: #define __UINT16_C_SUFFIX__ 
+// XTENSA_FAST32: #define __UINT16_C_SUFFIX__
 // XTENSA_FAST32: #define __UINT16_FMTX__ "hX"
 // XTENSA_FAST32: #define __UINT16_FMTo__ "ho"
 // XTENSA_FAST32: #define __UINT16_FMTu__ "hu"
@@ -3183,7 +3183,7 @@
 // XTENSA_FAST32: #define __UINT64_FMTx__ "llx"
 // XTENSA_FAST32: #define __UINT64_MAX__ 18446744073709551615ULL
 // XTENSA_FAST32: #define __UINT64_TYPE__ long long unsigned int
-// XTENSA_FAST32: #define __UINT8_C_SUFFIX__ 
+// XTENSA_FAST32: #define __UINT8_C_SUFFIX__
 // XTENSA_FAST32: #define __UINT8_FMTX__ "hhX"
 // XTENSA_FAST32: #define __UINT8_FMTo__ "hho"
 // XTENSA_FAST32: #define __UINT8_FMTu__ "hhu"

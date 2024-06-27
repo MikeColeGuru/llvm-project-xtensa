@@ -1210,12 +1210,12 @@ bool XtensaAsmParser::parseEndDirective(SMLoc L) {
     return Error(EndLoc, ".end of the region without .begin");
   else {
     RegionInfo Region = RegionInProgress.pop_back_val();
-   
+
     if (RegionInProgress.empty())
       TS.setLiteralSectionPrefix("");
     else
       TS.setLiteralSectionPrefix(Region.LiteralPrefixName);
-   
+
     if (RegionDirectiveName != Region.RegionDirectiveName) {
       return Error(EndLoc, ".end directive differs from .begin directive");
     }
@@ -1253,7 +1253,7 @@ bool XtensaAsmParser::ParseDirective(AsmToken DirectiveID) {
 
   return true;
 }
-  
+
 // Verify SR and UR
 bool XtensaAsmParser::checkRegister(StringRef Mnemonic, StringRef RegName,
                                     MCRegister RegNo) {

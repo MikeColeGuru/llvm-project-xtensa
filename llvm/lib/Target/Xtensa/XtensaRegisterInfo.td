@@ -227,10 +227,10 @@ def MR01 :  RegisterClass<"Xtensa", [i32], 32, (add M0, M1)>;
 def MR23 :  RegisterClass<"Xtensa", [i32], 32, (add M2, M3)>;
 def MR :  RegisterClass<"Xtensa", [i32], 32, (add MR01, MR23)>;
 
-def SR :  RegisterClass<"Xtensa", [i32], 32, (add 
+def SR :  RegisterClass<"Xtensa", [i32], 32, (add
   LBEG, LEND, LCOUNT, SAR, BREG, LITBASE, SCOMPARE1, ACCLO, ACCHI, MR,
   WINDOWBASE, WINDOWSTART, IBREAKENABLE, MEMCTL, ATOMCTL, DDR, IBREAKA0, IBREAKA1,
-  DBREAKA0, DBREAKA1, DBREAKC0, DBREAKC1, CONFIGID0, EPC1, EPC2, EPC3, EPC4, EPC5, 
+  DBREAKA0, DBREAKA1, DBREAKC0, DBREAKC1, CONFIGID0, EPC1, EPC2, EPC3, EPC4, EPC5,
   EPC6, EPC7, DEPC, EPS2, EPS3, EPS4, EPS5, EPS6, EPS7, CONFIGID1, EXCSAVE1, EXCSAVE2,
   EXCSAVE3, EXCSAVE4, EXCSAVE5, EXCSAVE6, EXCSAVE7, CPENABLE, INTERRUPT, INTCLEAR, INTENABLE,
   PS, VECBASE, EXCCAUSE, DEBUGCAUSE, CCOUNT, PRID, ICOUNT, ICOUNTLEVEL, EXCVADDR, CCOMPARE0,
@@ -263,7 +263,7 @@ def SAR_BYTE : URReg<240, "sar_byte", ["sar_byte"]>;
 def UA_STATE : URReg<241, "ua_state", ["ua_state_0", "ua_state_1", "ua_state_2", "ua_state_3"]>;
 
 def UR :  RegisterClass<"Xtensa", [i32], 32, (add GPIO_OUT, EXPSTATE, THREADPTR, FCR,
-  FSR, F64R_LO, F64R_HI, F64S, ACCX, QACC, FFT_BIT_WIDTH, SAR_BYTE, UA_STATE)>; 
+  FSR, F64R_LO, F64R_HI, F64S, ACCX, QACC, FFT_BIT_WIDTH, SAR_BYTE, UA_STATE)>;
 
 //===----------------------------------------------------------------------===//
 // Floating-Point registers
@@ -341,7 +341,7 @@ let SubRegIndices = [bsub0, bsub1, bsub2, bsub3] in {
 }
 
 def BR2 : RegisterClass<"Xtensa", [v2i1], 8, (add B0_B1, B2_B3, B4_B5,
-                                                  B6_B7, B8_B9, B10_B11, 
+                                                  B6_B7, B8_B9, B10_B11,
                                                   B12_B13, B14_B15)> {
   let Size = 8;
 }

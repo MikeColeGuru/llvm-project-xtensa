@@ -40,7 +40,7 @@ class XtensaInst88<dag outs, dag ins, string asmstr, list<dag> pattern,
   let DecoderNamespace = "HIFI3";
 }
 
-class XtensaAEInst24<dag outs, dag ins, string asmstr, list<dag> pattern, 
+class XtensaAEInst24<dag outs, dag ins, string asmstr, list<dag> pattern,
                     InstrItinClass itin = NoItinerary>
   : XtensaInst24<outs, ins, asmstr, pattern, itin> {
   let DecoderNamespace = "HIFI3";

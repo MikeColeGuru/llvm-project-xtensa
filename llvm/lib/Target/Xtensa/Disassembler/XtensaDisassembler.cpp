@@ -158,7 +158,7 @@ static const unsigned BR2DecoderTable[] = {
 
 
 static const unsigned BR4DecoderTable[] = {
-    Xtensa::B0_B1_B2_B3, Xtensa::B4_B5_B6_B7, 
+    Xtensa::B0_B1_B2_B3, Xtensa::B4_B5_B6_B7,
     Xtensa::B8_B9_B10_B11, Xtensa::B12_B13_B14_B15};
 
 
@@ -980,11 +980,11 @@ DecodeStatus XtensaDisassembler::getInstruction(MCInst &MI, uint64_t &Size,
     Result = decodeInstruction(DecoderTableHIFI324, MI, Insn, Address, this, STI);
     if(Result != MCDisassembler::Fail)
       return Result;
-    
+
     Result = readInstructionN(Bytes, Address, 48, Size, Insn, IsLittleEndian);
     if (Result == MCDisassembler::Fail)
       return MCDisassembler::Fail;
-    
+
     LLVM_DEBUG(dbgs() << "Trying Xtensa HIFI3 48-bit instruction table :\n");
     Result = decodeInstruction(DecoderTableHIFI348, MI, Insn, Address, this, STI);
     if(Result != MCDisassembler::Fail)

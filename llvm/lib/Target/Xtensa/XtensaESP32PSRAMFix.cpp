@@ -358,4 +358,3 @@ bool createXtensaPSRAMCacheFix::runOnMachineFunction(MachineFunction &MF) {
 FunctionPass *llvm::createXtensaPSRAMCacheFixPass() {
   return new createXtensaPSRAMCacheFix();
 }
-

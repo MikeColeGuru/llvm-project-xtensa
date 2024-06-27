@@ -30,7 +30,7 @@ define void @test_store_1xi64(i32 %a, <1 x i64> %v) {
   store <1 x i64> %v, ptr %p, align 8
   ret void
 }
-  
+
 define <1 x i64> @test_build_1xi64(i64 %v) {
   ; CHECK-LABEL: test_build_1xi64
   ; CHECK: ae_movda32x2 aed0, a3, a2

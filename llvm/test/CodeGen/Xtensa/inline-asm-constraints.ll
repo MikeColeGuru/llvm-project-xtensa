@@ -20,4 +20,3 @@ define float @constraint_f_float(float %a) nounwind {
   %2 = tail call float asm "add.s $0, $1, $2", "=f,f,f"(float %a, float %1)
   ret float %2
 }
-

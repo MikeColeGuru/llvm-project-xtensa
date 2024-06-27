@@ -29,4 +29,3 @@ for.body:                                         ; preds = %entry, %for.body
 ; CHECK-NEXT: [[LOOP_END]]:
 ; CHECK: j .LBB
 }
-

@@ -7,7 +7,7 @@ LBL0:
 # CHECK-INST: excw
 # CHECK: encoding: [0x80,0x20,0x00]
  excw
- 
+
 # CHECK-INST: rfde
 # CHECK: encoding: [0x00,0x32,0x00]
  rfde

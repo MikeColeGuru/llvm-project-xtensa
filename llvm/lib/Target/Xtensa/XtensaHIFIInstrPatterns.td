@@ -57,15 +57,15 @@ def : Pat<(v2i32 (build_vector AR:$a, AR:$a)),
             (AE_MOVDA32 AR:$a)>;
 
 /* Build const i64 vector when const fit in [-16,47]*/
-def : Pat<(v1i64 (Xtensa_build_vec imm16n_47:$a)), 
+def : Pat<(v1i64 (Xtensa_build_vec imm16n_47:$a)),
             (AE_SRLI64 (AE_MOVI imm16n_47:$a), (i32 32))>;
 
 /* Build const i64 vector with 32-bit const */
-def : Pat<(v1i64 (Xtensa_build_vec AR:$a)), 
+def : Pat<(v1i64 (Xtensa_build_vec AR:$a)),
             (AE_SRLI64 (AE_MOVDA32 AR:$a), (i32 32))>;
 
 
-def : Pat<(v1i32 (build_vector AR:$a)), 
+def : Pat<(v1i32 (build_vector AR:$a)),
             (AE_MOVDA32 AR:$a)>;
 
 def : Pat<(v4i16 (build_vector AR:$a, AR:$a, AR:$a, AR:$a)),
@@ -75,7 +75,7 @@ def : Pat<(v4i16 (build_vector AR:$v1, AR:$v2, AR:$v1, AR:$v2)),
             (AE_MOVDA16X2 AR:$v1, AR:$v2)>;
 
 def : Pat<(v4i16 (build_vector AR:$v1, AR:$v2, AR:$v3, AR:$v4)),
-            (AE_OR 
+            (AE_OR
                 (AE_SLAI64 (AE_MOVDA16X2 AR:$v1, AR:$v2), 32),
                 (AE_MOVDA16X2 AR:$v3, AR:$v4)
                 )>;
@@ -89,26 +89,26 @@ def : Pat<(i32 (extractelt v2i32:$v1, (i32 1))),
 def : Pat<(i32 (extractelt v1i32:$v1, (i32 0))),
             (AE_MOVAD32_L AE_DR:$v1)>;
 
-def : Pat<(i32 (vector_extract v4i16:$v1, (i32 0))), 
+def : Pat<(i32 (vector_extract v4i16:$v1, (i32 0))),
             (AE_MOVAD16_0 AE_DR:$v1)>;
 
-def : Pat<(i32 (vector_extract v4i16:$v1, (i32 1))), 
+def : Pat<(i32 (vector_extract v4i16:$v1, (i32 1))),
             (AE_MOVAD16_1 AE_DR:$v1)>;
 
-def : Pat<(i32 (vector_extract v4i16:$v1, (i32 2))), 
+def : Pat<(i32 (vector_extract v4i16:$v1, (i32 2))),
             (AE_MOVAD16_2 AE_DR:$v1)>;
 
-def : Pat<(i32 (vector_extract v4i16:$v1, (i32 3))), 
+def : Pat<(i32 (vector_extract v4i16:$v1, (i32 3))),
             (AE_MOVAD16_3 AE_DR:$v1)>;
 
-def : Pat<(v1i32 (extract_subvector v2i32:$v1, (i32 0))), 
+def : Pat<(v1i32 (extract_subvector v2i32:$v1, (i32 0))),
              (AE_MOVDA32 (AE_MOVAD32_L AE_DR:$v1))>;
 }
 
-class CAST_PAT<ValueType dst_vt, ValueType src_vt> 
+class CAST_PAT<ValueType dst_vt, ValueType src_vt>
   : Pat<(dst_vt (bitconvert src_vt:$v)),
           (COPY_TO_REGCLASS AE_DR:$v, AE_DR)>;
-  
+
 def : CAST_PAT<v1i64,v4i16>;
 def : CAST_PAT<v1i64,v2i32>;
 def : CAST_PAT<v2i32,v4i16>;
@@ -127,7 +127,7 @@ def : Pat<(v1i64 (sext v1i32:$src)),
 
 /*
 class BIN_PAT<SDPatternOperator node, Instruction inst,
-  ValueType dst_vt, ValueType src_vt = dst_vt> 
+  ValueType dst_vt, ValueType src_vt = dst_vt>
   : Pat<(node src_vt:$f1, src_vt:$f2),
         (inst dst_vt:$f1, dst_vt:$f2)>;
 */
@@ -162,11 +162,11 @@ def : Pat<(f32 (int_xtensa_xt_movt_s FPR:$t, FPR:$f, v1i1:$cc)),
 def : Pat<(f32 (select v1i1:$cc, FPR:$t, FPR:$f)),
             (MOVT_S FPR:$t, FPR:$f, v1i1:$cc)>,Requires<[HasSingleFloat]>;
 
-class SELECTCC_VEC_INT<CondCode cond, Instruction cmp, Instruction mov, ValueType vt> 
+class SELECTCC_VEC_INT<CondCode cond, Instruction cmp, Instruction mov, ValueType vt>
   :  Pat<(vt (selectcc i32:$lhs, i32:$rhs, AE_DR:$t, AE_DR:$f, cond)),
          (mov AE_DR:$t, AE_DR:$f, (cmp (AE_MOVDA32 AR:$lhs),
                                              (AE_MOVDA32 AR:$rhs)))>;
-  
+
 foreach vt = [v2i32,v1i32,v1i64,v4i16] in {
         def : SELECTCC_VEC_INT<SETEQ, AE_EQ64, AE_MOVT64, vt>;
         def : SELECTCC_VEC_INT<SETOEQ, AE_EQ64, AE_MOVT64, vt>;

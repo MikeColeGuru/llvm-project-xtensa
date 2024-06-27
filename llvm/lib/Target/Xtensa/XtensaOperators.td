@@ -37,7 +37,7 @@ def SDT_XtensaBrJT                : SDTypeProfile<0, 2,
 def SDT_XtensaSHL                 : SDTypeProfile<1, 1, [SDTCisVT<0, i32>, SDTCisVT<1, i32>]>;
 def SDT_XtensaSRA                 : SDTypeProfile<1, 1, [SDTCisVT<0, i32>, SDTCisVT<1, i32>]>;
 def SDT_XtensaSRL                 : SDTypeProfile<1, 1, [SDTCisVT<0, i32>, SDTCisVT<1, i32>]>;
-def SDT_XtensaSRC                 : SDTypeProfile<1, 2, [SDTCisVT<0, i32>, SDTCisVT<1, i32>, 
+def SDT_XtensaSRC                 : SDTypeProfile<1, 2, [SDTCisVT<0, i32>, SDTCisVT<1, i32>,
                                                          SDTCisVT<2, i32>]>;
 def SDT_XtensaSSL                 : SDTypeProfile<0, 1, [SDTCisVT<0, i32>]>;
 def SDT_XtensaSSR                 : SDTypeProfile<0, 1, [SDTCisVT<0, i32>]>;
@@ -97,7 +97,7 @@ def Xtensa_cmpuo      : SDNode<"XtensaISD::CMPUO", SDT_XtensaCmp, [SDNPOutGlue]>
 
 def Xtensa_madd: SDNode<"XtensaISD::MADD", SDT_XtensaMADD, [SDNPInGlue]>;
 def Xtensa_msub: SDNode<"XtensaISD::MSUB", SDT_XtensaMADD, [SDNPInGlue]>;
-def Xtensa_movs: SDNode<"XtensaISD::MOVS", SDT_XtensaMOVS, [SDNPInGlue]>; 
+def Xtensa_movs: SDNode<"XtensaISD::MOVS", SDT_XtensaMOVS, [SDNPInGlue]>;
 
 def Xtensa_shl: SDNode<"XtensaISD::SHL", SDT_XtensaSHL, [SDNPInGlue]>;
 def Xtensa_sra: SDNode<"XtensaISD::SRA", SDT_XtensaSRA, [SDNPInGlue]>;

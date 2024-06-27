@@ -94,289 +94,289 @@ def int_xtensa_ae_cvtq56p32s_h: ClangBuiltin<"__builtin_xtensa_ae_cvtq56p32s_h">
 def int_xtensa_ae_cvtq56p32s_l: ClangBuiltin<"__builtin_xtensa_ae_cvtq56p32s_l">,
   Intrinsic<[llvm_v1i64_ty], [llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_db: 
+def int_xtensa_ae_db:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_db_ic: 
+def int_xtensa_ae_db_ic:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_db_ip: 
+def int_xtensa_ae_db_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_dbi: 
+def int_xtensa_ae_dbi:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>, IntrNoMem]>;
 
-def int_xtensa_ae_dbi_ic: 
+def int_xtensa_ae_dbi_ic:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>, IntrNoMem]>;
 
-def int_xtensa_ae_dbi_ip: 
+def int_xtensa_ae_dbi_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>, IntrNoMem]>;
 
-def int_xtensa_ae_div64d32_h: 
+def int_xtensa_ae_div64d32_h:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_div64d32_l: 
+def int_xtensa_ae_div64d32_l:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_eq16: 
+def int_xtensa_ae_eq16:
   Intrinsic<[llvm_v4i1_ty], [llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_eq32: 
+def int_xtensa_ae_eq32:
   Intrinsic<[llvm_v2i1_ty], [llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_eq64: 
+def int_xtensa_ae_eq64:
   Intrinsic<[llvm_v1i1_ty], [llvm_v1i64_ty, llvm_v1i64_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_l16_i: ClangBuiltin<"__builtin_xtensa_ae_l16_i">,
   Intrinsic<[llvm_v4i16_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l16_ip: 
+def int_xtensa_ae_l16_ip:
   Intrinsic<[llvm_v4i16_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
 def int_xtensa_ae_l16_x: ClangBuiltin<"__builtin_xtensa_ae_l16_x">,
   Intrinsic<[llvm_v4i16_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l16_xc: 
+def int_xtensa_ae_l16_xc:
   Intrinsic<[llvm_v4i16_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l16_xp: 
+def int_xtensa_ae_l16_xp:
   Intrinsic<[llvm_v4i16_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_l16m_i: ClangBuiltin<"__builtin_xtensa_ae_l16m_i">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l16m_iu: 
+def int_xtensa_ae_l16m_iu:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
 def int_xtensa_ae_l16m_x: ClangBuiltin<"__builtin_xtensa_ae_l16m_x">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l16m_xc: 
+def int_xtensa_ae_l16m_xc:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l16m_xu: 
+def int_xtensa_ae_l16m_xu:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_l16x2m_i: ClangBuiltin<"__builtin_xtensa_ae_l16x2m_i">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l16x2m_iu: 
+def int_xtensa_ae_l16x2m_iu:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
 def int_xtensa_ae_l16x2m_x: ClangBuiltin<"__builtin_xtensa_ae_l16x2m_x">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l16x2m_xc: 
+def int_xtensa_ae_l16x2m_xc:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l16x2m_xu: 
+def int_xtensa_ae_l16x2m_xu:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_l16x4_i: ClangBuiltin<"__builtin_xtensa_ae_l16x4_i">,
   Intrinsic<[llvm_v4i16_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l16x4_ip: 
+def int_xtensa_ae_l16x4_ip:
   Intrinsic<[llvm_v4i16_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l16x4_ric: 
+def int_xtensa_ae_l16x4_ric:
   Intrinsic<[llvm_v4i16_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_l16x4_rip: 
+def int_xtensa_ae_l16x4_rip:
   Intrinsic<[llvm_v4i16_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
 def int_xtensa_ae_l16x4_x: ClangBuiltin<"__builtin_xtensa_ae_l16x4_x">,
   Intrinsic<[llvm_v4i16_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l16x4_xc: 
+def int_xtensa_ae_l16x4_xc:
   Intrinsic<[llvm_v4i16_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l16x4_xp: 
+def int_xtensa_ae_l16x4_xp:
   Intrinsic<[llvm_v4i16_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_l32_i: ClangBuiltin<"__builtin_xtensa_ae_l32_i">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l32_ip: 
+def int_xtensa_ae_l32_ip:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
 def int_xtensa_ae_l32_x: ClangBuiltin<"__builtin_xtensa_ae_l32_x">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32_xc: 
+def int_xtensa_ae_l32_xc:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32_xp: 
+def int_xtensa_ae_l32_xp:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_l32f24_i: ClangBuiltin<"__builtin_xtensa_ae_l32f24_i">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l32f24_ip: 
+def int_xtensa_ae_l32f24_ip:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
 def int_xtensa_ae_l32f24_x: ClangBuiltin<"__builtin_xtensa_ae_l32f24_x">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32f24_xc: 
+def int_xtensa_ae_l32f24_xc:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32f24_xp: 
+def int_xtensa_ae_l32f24_xp:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_l32m_i: ClangBuiltin<"__builtin_xtensa_ae_l32m_i">,
   Intrinsic<[llvm_v1i64_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l32m_iu: 
+def int_xtensa_ae_l32m_iu:
   Intrinsic<[llvm_v1i64_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
 def int_xtensa_ae_l32m_x: ClangBuiltin<"__builtin_xtensa_ae_l32m_x">,
   Intrinsic<[llvm_v1i64_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32m_xc: 
+def int_xtensa_ae_l32m_xc:
   Intrinsic<[llvm_v1i64_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32m_xu: 
+def int_xtensa_ae_l32m_xu:
   Intrinsic<[llvm_v1i64_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_l32x2_i: ClangBuiltin<"__builtin_xtensa_ae_l32x2_i">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l32x2_ip: 
+def int_xtensa_ae_l32x2_ip:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l32x2_ric: 
+def int_xtensa_ae_l32x2_ric:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_l32x2_rip: 
+def int_xtensa_ae_l32x2_rip:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
 def int_xtensa_ae_l32x2_x: ClangBuiltin<"__builtin_xtensa_ae_l32x2_x">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32x2_xc: 
+def int_xtensa_ae_l32x2_xc:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32x2_xp: 
+def int_xtensa_ae_l32x2_xp:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_l32x2f24_i: ClangBuiltin<"__builtin_xtensa_ae_l32x2f24_i">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l32x2f24_ip: 
+def int_xtensa_ae_l32x2f24_ip:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l32x2f24_ric: 
+def int_xtensa_ae_l32x2f24_ric:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_l32x2f24_rip: 
+def int_xtensa_ae_l32x2f24_rip:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
 def int_xtensa_ae_l32x2f24_x: ClangBuiltin<"__builtin_xtensa_ae_l32x2f24_x">,
   Intrinsic<[llvm_v2i32_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32x2f24_xc: 
+def int_xtensa_ae_l32x2f24_xc:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l32x2f24_xp: 
+def int_xtensa_ae_l32x2f24_xp:
   Intrinsic<[llvm_v2i32_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_l64_i: ClangBuiltin<"__builtin_xtensa_ae_l64_i">,
   Intrinsic<[llvm_v1i64_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_ae_l64_ip: 
+def int_xtensa_ae_l64_ip:
   Intrinsic<[llvm_v1i64_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
 def int_xtensa_ae_l64_x: ClangBuiltin<"__builtin_xtensa_ae_l64_x">,
   Intrinsic<[llvm_v1i64_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l64_xc: 
+def int_xtensa_ae_l64_xc:
   Intrinsic<[llvm_v1i64_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_l64_xp: 
+def int_xtensa_ae_l64_xp:
   Intrinsic<[llvm_v1i64_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_la16x4_ic: 
+def int_xtensa_ae_la16x4_ic:
   Intrinsic<[llvm_v4i16_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la16x4_ip: 
+def int_xtensa_ae_la16x4_ip:
   Intrinsic<[llvm_v4i16_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la16x4_ric: 
+def int_xtensa_ae_la16x4_ric:
   Intrinsic<[llvm_v4i16_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la16x4_rip: 
+def int_xtensa_ae_la16x4_rip:
   Intrinsic<[llvm_v4i16_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la16x4neg_pc: 
+def int_xtensa_ae_la16x4neg_pc:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la16x4pos_pc: 
+def int_xtensa_ae_la16x4pos_pc:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24_ic: 
+def int_xtensa_ae_la24_ic:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24_ip: 
+def int_xtensa_ae_la24_ip:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24_ric: 
+def int_xtensa_ae_la24_ric:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24_rip: 
+def int_xtensa_ae_la24_rip:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24neg_pc: 
+def int_xtensa_ae_la24neg_pc:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24pos_pc: 
+def int_xtensa_ae_la24pos_pc:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24x2_ic: 
+def int_xtensa_ae_la24x2_ic:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24x2_ip: 
+def int_xtensa_ae_la24x2_ip:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24x2_ric: 
+def int_xtensa_ae_la24x2_ric:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24x2_rip: 
+def int_xtensa_ae_la24x2_rip:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24x2neg_pc: 
+def int_xtensa_ae_la24x2neg_pc:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la24x2pos_pc: 
+def int_xtensa_ae_la24x2pos_pc:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2_ic: 
+def int_xtensa_ae_la32x2_ic:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2_ip: 
+def int_xtensa_ae_la32x2_ip:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2_ric: 
+def int_xtensa_ae_la32x2_ric:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2_rip: 
+def int_xtensa_ae_la32x2_rip:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2f24_ic: 
+def int_xtensa_ae_la32x2f24_ic:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2f24_ip: 
+def int_xtensa_ae_la32x2f24_ip:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2f24_ric: 
+def int_xtensa_ae_la32x2f24_ric:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2f24_rip: 
+def int_xtensa_ae_la32x2f24_rip:
   Intrinsic<[llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2neg_pc: 
+def int_xtensa_ae_la32x2neg_pc:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
-def int_xtensa_ae_la32x2pos_pc: 
+def int_xtensa_ae_la32x2pos_pc:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_ptr_ty], []>;
 
 def int_xtensa_ae_la64_pp: ClangBuiltin<"__builtin_xtensa_ae_la64_pp">,
@@ -403,22 +403,22 @@ def int_xtensa_ae_lbs: ClangBuiltin<"__builtin_xtensa_ae_lbs">,
 def int_xtensa_ae_lbsi: ClangBuiltin<"__builtin_xtensa_ae_lbsi">,
   Intrinsic<[llvm_i32_ty], [llvm_i32_ty], [ImmArg<ArgIndex<0>>, IntrNoMem]>;
 
-def int_xtensa_ae_le16: 
+def int_xtensa_ae_le16:
   Intrinsic<[llvm_v4i1_ty], [llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_le32: 
+def int_xtensa_ae_le32:
   Intrinsic<[llvm_v2i1_ty], [llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_le64: 
+def int_xtensa_ae_le64:
   Intrinsic<[llvm_v1i1_ty], [llvm_v1i64_ty, llvm_v1i64_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_lt16: 
+def int_xtensa_ae_lt16:
   Intrinsic<[llvm_v4i1_ty], [llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_lt32: 
+def int_xtensa_ae_lt32:
   Intrinsic<[llvm_v2i1_ty], [llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_lt64: 
+def int_xtensa_ae_lt64:
   Intrinsic<[llvm_v1i1_ty], [llvm_v1i64_ty, llvm_v1i64_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_max32: ClangBuiltin<"__builtin_xtensa_ae_max32">,
@@ -481,28 +481,28 @@ def int_xtensa_ae_movda32: ClangBuiltin<"__builtin_xtensa_ae_movda32">,
 def int_xtensa_ae_movda32x2: ClangBuiltin<"__builtin_xtensa_ae_movda32x2">,
   Intrinsic<[llvm_v2i32_ty], [llvm_i32_ty, llvm_i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_movf16x4: 
+def int_xtensa_ae_movf16x4:
   Intrinsic<[llvm_v4i16_ty], [llvm_v4i16_ty, llvm_v4i16_ty, llvm_v4i1_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_movf32x2: 
+def int_xtensa_ae_movf32x2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i1_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_movf64: 
+def int_xtensa_ae_movf64:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v1i1_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_movi: ClangBuiltin<"__builtin_xtensa_ae_movi">,
   Intrinsic<[llvm_v2i32_ty], [llvm_i32_ty], [ImmArg<ArgIndex<0>>, IntrNoMem]>;
 
-def int_xtensa_ae_movt16x4: 
+def int_xtensa_ae_movt16x4:
   Intrinsic<[llvm_v4i16_ty], [llvm_v4i16_ty, llvm_v4i16_ty, llvm_v4i1_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_movt32x2: 
+def int_xtensa_ae_movt32x2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i1_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_movt64: 
+def int_xtensa_ae_movt64:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v1i1_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mul16x4: 
+def int_xtensa_ae_mul16x4:
   Intrinsic<[llvm_v2i32_ty, llvm_v2i32_ty], [llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_mul32_hh: ClangBuiltin<"__builtin_xtensa_ae_mul32_hh">,
@@ -568,457 +568,457 @@ def int_xtensa_ae_mul32x16_l3: ClangBuiltin<"__builtin_xtensa_ae_mul32x16_l3">,
 def int_xtensa_ae_mul32x16_l3_s2: ClangBuiltin<"__builtin_xtensa_ae_mul32x16_l3_s2">,
   Intrinsic<[llvm_v1i64_ty], [llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula16x4: 
+def int_xtensa_ae_mula16x4:
   Intrinsic<[llvm_v2i32_ty, llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32_hh: 
+def int_xtensa_ae_mula32_hh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32_lh: 
+def int_xtensa_ae_mula32_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32_ll: 
+def int_xtensa_ae_mula32_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32_ll_s2: 
+def int_xtensa_ae_mula32_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32u_ll: 
+def int_xtensa_ae_mula32u_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_h0: 
+def int_xtensa_ae_mula32x16_h0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_h0_s2: 
+def int_xtensa_ae_mula32x16_h0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_h1: 
+def int_xtensa_ae_mula32x16_h1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_h1_s2: 
+def int_xtensa_ae_mula32x16_h1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_h2: 
+def int_xtensa_ae_mula32x16_h2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_h2_s2: 
+def int_xtensa_ae_mula32x16_h2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_h3: 
+def int_xtensa_ae_mula32x16_h3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_h3_s2: 
+def int_xtensa_ae_mula32x16_h3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_l0: 
+def int_xtensa_ae_mula32x16_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_l0_s2: 
+def int_xtensa_ae_mula32x16_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_l1: 
+def int_xtensa_ae_mula32x16_l1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_l1_s2: 
+def int_xtensa_ae_mula32x16_l1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_l2: 
+def int_xtensa_ae_mula32x16_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_l2_s2: 
+def int_xtensa_ae_mula32x16_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_l3: 
+def int_xtensa_ae_mula32x16_l3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mula32x16_l3_s2: 
+def int_xtensa_ae_mula32x16_l3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad24_hh_ll: 
+def int_xtensa_ae_mulaad24_hh_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad24_hh_ll_s2: 
+def int_xtensa_ae_mulaad24_hh_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad24_hl_lh: 
+def int_xtensa_ae_mulaad24_hl_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad24_hl_lh_s2: 
+def int_xtensa_ae_mulaad24_hl_lh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad32x16_h0_l1: 
+def int_xtensa_ae_mulaad32x16_h0_l1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad32x16_h0_l1_s2: 
+def int_xtensa_ae_mulaad32x16_h0_l1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad32x16_h1_l0: 
+def int_xtensa_ae_mulaad32x16_h1_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad32x16_h1_l0_s2: 
+def int_xtensa_ae_mulaad32x16_h1_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad32x16_h2_l3: 
+def int_xtensa_ae_mulaad32x16_h2_l3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad32x16_h2_l3_s2: 
+def int_xtensa_ae_mulaad32x16_h2_l3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad32x16_h3_l2: 
+def int_xtensa_ae_mulaad32x16_h3_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaad32x16_h3_l2_s2: 
+def int_xtensa_ae_mulaad32x16_h3_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd16ss_11_00: 
+def int_xtensa_ae_mulaafd16ss_11_00:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd16ss_11_00_s2: 
+def int_xtensa_ae_mulaafd16ss_11_00_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd16ss_13_02: 
+def int_xtensa_ae_mulaafd16ss_13_02:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd16ss_13_02_s2: 
+def int_xtensa_ae_mulaafd16ss_13_02_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd16ss_33_22: 
+def int_xtensa_ae_mulaafd16ss_33_22:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd16ss_33_22_s2: 
+def int_xtensa_ae_mulaafd16ss_33_22_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd24_hh_ll: 
+def int_xtensa_ae_mulaafd24_hh_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd24_hh_ll_s2: 
+def int_xtensa_ae_mulaafd24_hh_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd24_hl_lh: 
+def int_xtensa_ae_mulaafd24_hl_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd24_hl_lh_s2: 
+def int_xtensa_ae_mulaafd24_hl_lh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd32x16_h0_l1: 
+def int_xtensa_ae_mulaafd32x16_h0_l1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd32x16_h0_l1_s2: 
+def int_xtensa_ae_mulaafd32x16_h0_l1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd32x16_h1_l0: 
+def int_xtensa_ae_mulaafd32x16_h1_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd32x16_h1_l0_s2: 
+def int_xtensa_ae_mulaafd32x16_h1_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd32x16_h2_l3: 
+def int_xtensa_ae_mulaafd32x16_h2_l3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd32x16_h2_l3_s2: 
+def int_xtensa_ae_mulaafd32x16_h2_l3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd32x16_h3_l2: 
+def int_xtensa_ae_mulaafd32x16_h3_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaafd32x16_h3_l2_s2: 
+def int_xtensa_ae_mulaafd32x16_h3_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulac24: 
+def int_xtensa_ae_mulac24:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulac32x16_h: 
+def int_xtensa_ae_mulac32x16_h:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulac32x16_l: 
+def int_xtensa_ae_mulac32x16_l:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_00: 
+def int_xtensa_ae_mulaf16ss_00:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_00_s2: 
+def int_xtensa_ae_mulaf16ss_00_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_10: 
+def int_xtensa_ae_mulaf16ss_10:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_11: 
+def int_xtensa_ae_mulaf16ss_11:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_20: 
+def int_xtensa_ae_mulaf16ss_20:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_21: 
+def int_xtensa_ae_mulaf16ss_21:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_22: 
+def int_xtensa_ae_mulaf16ss_22:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_30: 
+def int_xtensa_ae_mulaf16ss_30:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_31: 
+def int_xtensa_ae_mulaf16ss_31:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_32: 
+def int_xtensa_ae_mulaf16ss_32:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16ss_33: 
+def int_xtensa_ae_mulaf16ss_33:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf16x4ss: 
+def int_xtensa_ae_mulaf16x4ss:
   Intrinsic<[llvm_v2i32_ty, llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32r_hh: 
+def int_xtensa_ae_mulaf32r_hh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32r_lh: 
+def int_xtensa_ae_mulaf32r_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32r_ll: 
+def int_xtensa_ae_mulaf32r_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32r_ll_s2: 
+def int_xtensa_ae_mulaf32r_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32s_hh: 
+def int_xtensa_ae_mulaf32s_hh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32s_lh: 
+def int_xtensa_ae_mulaf32s_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32s_ll: 
+def int_xtensa_ae_mulaf32s_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32s_ll_s2: 
+def int_xtensa_ae_mulaf32s_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_h0: 
+def int_xtensa_ae_mulaf32x16_h0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_h0_s2: 
+def int_xtensa_ae_mulaf32x16_h0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_h1: 
+def int_xtensa_ae_mulaf32x16_h1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_h1_s2: 
+def int_xtensa_ae_mulaf32x16_h1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_h2: 
+def int_xtensa_ae_mulaf32x16_h2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_h2_s2: 
+def int_xtensa_ae_mulaf32x16_h2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_h3: 
+def int_xtensa_ae_mulaf32x16_h3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_h3_s2: 
+def int_xtensa_ae_mulaf32x16_h3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_l0: 
+def int_xtensa_ae_mulaf32x16_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_l0_s2: 
+def int_xtensa_ae_mulaf32x16_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_l1: 
+def int_xtensa_ae_mulaf32x16_l1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_l1_s2: 
+def int_xtensa_ae_mulaf32x16_l1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_l2: 
+def int_xtensa_ae_mulaf32x16_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_l2_s2: 
+def int_xtensa_ae_mulaf32x16_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_l3: 
+def int_xtensa_ae_mulaf32x16_l3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf32x16_l3_s2: 
+def int_xtensa_ae_mulaf32x16_l3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf48q32sp16s_l: 
+def int_xtensa_ae_mulaf48q32sp16s_l:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf48q32sp16s_l_s2: 
+def int_xtensa_ae_mulaf48q32sp16s_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf48q32sp16u_l: 
+def int_xtensa_ae_mulaf48q32sp16u_l:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaf48q32sp16u_l_s2: 
+def int_xtensa_ae_mulaf48q32sp16u_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafc24ra: 
+def int_xtensa_ae_mulafc24ra:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafc32x16ras_h: 
+def int_xtensa_ae_mulafc32x16ras_h:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafc32x16ras_l: 
+def int_xtensa_ae_mulafc32x16ras_l:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafd24x2_fir_h: 
+def int_xtensa_ae_mulafd24x2_fir_h:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafd24x2_fir_l: 
+def int_xtensa_ae_mulafd24x2_fir_l:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafd32x16x2_fir_hh: 
+def int_xtensa_ae_mulafd32x16x2_fir_hh:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafd32x16x2_fir_hl: 
+def int_xtensa_ae_mulafd32x16x2_fir_hl:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafd32x16x2_fir_lh: 
+def int_xtensa_ae_mulafd32x16x2_fir_lh:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafd32x16x2_fir_ll: 
+def int_xtensa_ae_mulafd32x16x2_fir_ll:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp24x2r: 
+def int_xtensa_ae_mulafp24x2r:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp24x2r_s2: 
+def int_xtensa_ae_mulafp24x2r_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp24x2ra: 
+def int_xtensa_ae_mulafp24x2ra:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp24x2ra_s2: 
+def int_xtensa_ae_mulafp24x2ra_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x16x2ras_h: 
+def int_xtensa_ae_mulafp32x16x2ras_h:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x16x2ras_h_s2: 
+def int_xtensa_ae_mulafp32x16x2ras_h_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x16x2ras_l: 
+def int_xtensa_ae_mulafp32x16x2ras_l:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x16x2ras_l_s2: 
+def int_xtensa_ae_mulafp32x16x2ras_l_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x16x2rs_h: 
+def int_xtensa_ae_mulafp32x16x2rs_h:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x16x2rs_h_s2: 
+def int_xtensa_ae_mulafp32x16x2rs_h_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x16x2rs_l: 
+def int_xtensa_ae_mulafp32x16x2rs_l:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x16x2rs_l_s2: 
+def int_xtensa_ae_mulafp32x16x2rs_l_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x2ras: 
+def int_xtensa_ae_mulafp32x2ras:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafp32x2rs: 
+def int_xtensa_ae_mulafp32x2rs:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafq32sp24s_h_s2: 
+def int_xtensa_ae_mulafq32sp24s_h_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulafq32sp24s_l_s2: 
+def int_xtensa_ae_mulafq32sp24s_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulap24x2: 
+def int_xtensa_ae_mulap24x2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulap24x2_s2: 
+def int_xtensa_ae_mulap24x2_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulap32x16x2_h: 
+def int_xtensa_ae_mulap32x16x2_h:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulap32x16x2_l: 
+def int_xtensa_ae_mulap32x16x2_l:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulap32x2: 
+def int_xtensa_ae_mulap32x2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaq32sp16s_l_s2: 
+def int_xtensa_ae_mulaq32sp16s_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulaq32sp16u_l_s2: 
+def int_xtensa_ae_mulaq32sp16u_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mularfq32sp24s_h_s2: 
+def int_xtensa_ae_mularfq32sp24s_h_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mularfq32sp24s_l_s2: 
+def int_xtensa_ae_mularfq32sp24s_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulas32f48p16s_hh: 
+def int_xtensa_ae_mulas32f48p16s_hh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulas32f48p16s_hh_s2: 
+def int_xtensa_ae_mulas32f48p16s_hh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulas32f48p16s_lh: 
+def int_xtensa_ae_mulas32f48p16s_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulas32f48p16s_lh_s2: 
+def int_xtensa_ae_mulas32f48p16s_lh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulas32f48p16s_ll: 
+def int_xtensa_ae_mulas32f48p16s_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulas32f48p16s_ll_s2: 
+def int_xtensa_ae_mulas32f48p16s_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasd24_hh_ll: 
+def int_xtensa_ae_mulasd24_hh_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasd24_hh_ll_s2: 
+def int_xtensa_ae_mulasd24_hh_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasd24_hl_lh: 
+def int_xtensa_ae_mulasd24_hl_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasd24_hl_lh_s2: 
+def int_xtensa_ae_mulasd24_hl_lh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasd32x16_h1_l0: 
+def int_xtensa_ae_mulasd32x16_h1_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasd32x16_h1_l0_s2: 
+def int_xtensa_ae_mulasd32x16_h1_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasd32x16_h3_l2: 
+def int_xtensa_ae_mulasd32x16_h3_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasd32x16_h3_l2_s2: 
+def int_xtensa_ae_mulasd32x16_h3_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasfd24_hh_ll: 
+def int_xtensa_ae_mulasfd24_hh_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasfd24_hh_ll_s2: 
+def int_xtensa_ae_mulasfd24_hh_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasfd24_hl_lh: 
+def int_xtensa_ae_mulasfd24_hl_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasfd24_hl_lh_s2: 
+def int_xtensa_ae_mulasfd24_hl_lh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasfd32x16_h1_l0: 
+def int_xtensa_ae_mulasfd32x16_h1_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasfd32x16_h1_l0_s2: 
+def int_xtensa_ae_mulasfd32x16_h1_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasfd32x16_h3_l2: 
+def int_xtensa_ae_mulasfd32x16_h3_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulasfd32x16_h3_l2_s2: 
+def int_xtensa_ae_mulasfd32x16_h3_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_mulc24: ClangBuiltin<"__builtin_xtensa_ae_mulc24">,
@@ -1063,7 +1063,7 @@ def int_xtensa_ae_mulf16ss_32: ClangBuiltin<"__builtin_xtensa_ae_mulf16ss_32">,
 def int_xtensa_ae_mulf16ss_33: ClangBuiltin<"__builtin_xtensa_ae_mulf16ss_33">,
   Intrinsic<[llvm_v2i32_ty], [llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulf16x4ss: 
+def int_xtensa_ae_mulf16x4ss:
   Intrinsic<[llvm_v2i32_ty, llvm_v2i32_ty], [llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_mulf32r_hh: ClangBuiltin<"__builtin_xtensa_ae_mulf32r_hh">,
@@ -1159,22 +1159,22 @@ def int_xtensa_ae_mulfc32x16ras_h: ClangBuiltin<"__builtin_xtensa_ae_mulfc32x16r
 def int_xtensa_ae_mulfc32x16ras_l: ClangBuiltin<"__builtin_xtensa_ae_mulfc32x16ras_l">,
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulfd24x2_fir_h: 
+def int_xtensa_ae_mulfd24x2_fir_h:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulfd24x2_fir_l: 
+def int_xtensa_ae_mulfd24x2_fir_l:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulfd32x16x2_fir_hh: 
+def int_xtensa_ae_mulfd32x16x2_fir_hh:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulfd32x16x2_fir_hl: 
+def int_xtensa_ae_mulfd32x16x2_fir_hl:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulfd32x16x2_fir_lh: 
+def int_xtensa_ae_mulfd32x16x2_fir_lh:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulfd32x16x2_fir_ll: 
+def int_xtensa_ae_mulfd32x16x2_fir_ll:
   Intrinsic<[llvm_v1i64_ty, llvm_v1i64_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_mulfp16x4ras: ClangBuiltin<"__builtin_xtensa_ae_mulfp16x4ras">,
@@ -1258,16 +1258,16 @@ def int_xtensa_ae_mulrfq32sp24s_h_s2: ClangBuiltin<"__builtin_xtensa_ae_mulrfq32
 def int_xtensa_ae_mulrfq32sp24s_l_s2: ClangBuiltin<"__builtin_xtensa_ae_mulrfq32sp24s_l_s2">,
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls16x4: 
+def int_xtensa_ae_muls16x4:
   Intrinsic<[llvm_v2i32_ty, llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32_hh: 
+def int_xtensa_ae_muls32_hh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32_lh: 
+def int_xtensa_ae_muls32_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32_ll: 
+def int_xtensa_ae_muls32_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_muls32f48p16s_hh: ClangBuiltin<"__builtin_xtensa_ae_muls32f48p16s_hh">,
@@ -1288,367 +1288,367 @@ def int_xtensa_ae_muls32f48p16s_ll: ClangBuiltin<"__builtin_xtensa_ae_muls32f48p
 def int_xtensa_ae_muls32f48p16s_ll_s2: ClangBuiltin<"__builtin_xtensa_ae_muls32f48p16s_ll_s2">,
   Intrinsic<[llvm_v1i64_ty], [llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32u_ll: 
+def int_xtensa_ae_muls32u_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_h0: 
+def int_xtensa_ae_muls32x16_h0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_h0_s2: 
+def int_xtensa_ae_muls32x16_h0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_h1: 
+def int_xtensa_ae_muls32x16_h1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_h1_s2: 
+def int_xtensa_ae_muls32x16_h1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_h2: 
+def int_xtensa_ae_muls32x16_h2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_h2_s2: 
+def int_xtensa_ae_muls32x16_h2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_h3: 
+def int_xtensa_ae_muls32x16_h3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_h3_s2: 
+def int_xtensa_ae_muls32x16_h3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_l0: 
+def int_xtensa_ae_muls32x16_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_l0_s2: 
+def int_xtensa_ae_muls32x16_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_l1: 
+def int_xtensa_ae_muls32x16_l1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_l1_s2: 
+def int_xtensa_ae_muls32x16_l1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_l2: 
+def int_xtensa_ae_muls32x16_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_l2_s2: 
+def int_xtensa_ae_muls32x16_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_l3: 
+def int_xtensa_ae_muls32x16_l3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_muls32x16_l3_s2: 
+def int_xtensa_ae_muls32x16_l3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsad24_hh_ll: 
+def int_xtensa_ae_mulsad24_hh_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsad24_hh_ll_s2: 
+def int_xtensa_ae_mulsad24_hh_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsad32x16_h1_l0: 
+def int_xtensa_ae_mulsad32x16_h1_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsad32x16_h1_l0_s2: 
+def int_xtensa_ae_mulsad32x16_h1_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsad32x16_h3_l2: 
+def int_xtensa_ae_mulsad32x16_h3_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsad32x16_h3_l2_s2: 
+def int_xtensa_ae_mulsad32x16_h3_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsafd24_hh_ll: 
+def int_xtensa_ae_mulsafd24_hh_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsafd24_hh_ll_s2: 
+def int_xtensa_ae_mulsafd24_hh_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsafd32x16_h1_l0: 
+def int_xtensa_ae_mulsafd32x16_h1_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsafd32x16_h1_l0_s2: 
+def int_xtensa_ae_mulsafd32x16_h1_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsafd32x16_h3_l2: 
+def int_xtensa_ae_mulsafd32x16_h3_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsafd32x16_h3_l2_s2: 
+def int_xtensa_ae_mulsafd32x16_h3_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_00: 
+def int_xtensa_ae_mulsf16ss_00:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_00_s2: 
+def int_xtensa_ae_mulsf16ss_00_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_10: 
+def int_xtensa_ae_mulsf16ss_10:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_11: 
+def int_xtensa_ae_mulsf16ss_11:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_20: 
+def int_xtensa_ae_mulsf16ss_20:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_21: 
+def int_xtensa_ae_mulsf16ss_21:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_22: 
+def int_xtensa_ae_mulsf16ss_22:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_30: 
+def int_xtensa_ae_mulsf16ss_30:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_31: 
+def int_xtensa_ae_mulsf16ss_31:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_32: 
+def int_xtensa_ae_mulsf16ss_32:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16ss_33: 
+def int_xtensa_ae_mulsf16ss_33:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf16x4ss: 
+def int_xtensa_ae_mulsf16x4ss:
   Intrinsic<[llvm_v2i32_ty, llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32r_hh: 
+def int_xtensa_ae_mulsf32r_hh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32r_lh: 
+def int_xtensa_ae_mulsf32r_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32r_ll: 
+def int_xtensa_ae_mulsf32r_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32r_ll_s2: 
+def int_xtensa_ae_mulsf32r_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32s_hh: 
+def int_xtensa_ae_mulsf32s_hh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32s_lh: 
+def int_xtensa_ae_mulsf32s_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32s_ll: 
+def int_xtensa_ae_mulsf32s_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_h0: 
+def int_xtensa_ae_mulsf32x16_h0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_h0_s2: 
+def int_xtensa_ae_mulsf32x16_h0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_h1: 
+def int_xtensa_ae_mulsf32x16_h1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_h1_s2: 
+def int_xtensa_ae_mulsf32x16_h1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_h2: 
+def int_xtensa_ae_mulsf32x16_h2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_h2_s2: 
+def int_xtensa_ae_mulsf32x16_h2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_h3: 
+def int_xtensa_ae_mulsf32x16_h3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_h3_s2: 
+def int_xtensa_ae_mulsf32x16_h3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_l0: 
+def int_xtensa_ae_mulsf32x16_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_l0_s2: 
+def int_xtensa_ae_mulsf32x16_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_l1: 
+def int_xtensa_ae_mulsf32x16_l1:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_l1_s2: 
+def int_xtensa_ae_mulsf32x16_l1_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_l2: 
+def int_xtensa_ae_mulsf32x16_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_l2_s2: 
+def int_xtensa_ae_mulsf32x16_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_l3: 
+def int_xtensa_ae_mulsf32x16_l3:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf32x16_l3_s2: 
+def int_xtensa_ae_mulsf32x16_l3_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf48q32sp16s_l: 
+def int_xtensa_ae_mulsf48q32sp16s_l:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf48q32sp16s_l_s2: 
+def int_xtensa_ae_mulsf48q32sp16s_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf48q32sp16u_l: 
+def int_xtensa_ae_mulsf48q32sp16u_l:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsf48q32sp16u_l_s2: 
+def int_xtensa_ae_mulsf48q32sp16u_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp24x2r: 
+def int_xtensa_ae_mulsfp24x2r:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp24x2r_s2: 
+def int_xtensa_ae_mulsfp24x2r_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp24x2ra: 
+def int_xtensa_ae_mulsfp24x2ra:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp24x2ra_s2: 
+def int_xtensa_ae_mulsfp24x2ra_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x16x2ras_h: 
+def int_xtensa_ae_mulsfp32x16x2ras_h:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x16x2ras_h_s2: 
+def int_xtensa_ae_mulsfp32x16x2ras_h_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x16x2ras_l: 
+def int_xtensa_ae_mulsfp32x16x2ras_l:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x16x2ras_l_s2: 
+def int_xtensa_ae_mulsfp32x16x2ras_l_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x16x2rs_h: 
+def int_xtensa_ae_mulsfp32x16x2rs_h:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x16x2rs_h_s2: 
+def int_xtensa_ae_mulsfp32x16x2rs_h_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x16x2rs_l: 
+def int_xtensa_ae_mulsfp32x16x2rs_l:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x16x2rs_l_s2: 
+def int_xtensa_ae_mulsfp32x16x2rs_l_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x2ras: 
+def int_xtensa_ae_mulsfp32x2ras:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfp32x2rs: 
+def int_xtensa_ae_mulsfp32x2rs:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfq32sp24s_h_s2: 
+def int_xtensa_ae_mulsfq32sp24s_h_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsfq32sp24s_l_s2: 
+def int_xtensa_ae_mulsfq32sp24s_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsp24x2: 
+def int_xtensa_ae_mulsp24x2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsp24x2_s2: 
+def int_xtensa_ae_mulsp24x2_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsp32x16x2_h: 
+def int_xtensa_ae_mulsp32x16x2_h:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsp32x16x2_l: 
+def int_xtensa_ae_mulsp32x16x2_l:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsp32x2: 
+def int_xtensa_ae_mulsp32x2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsq32sp16s_l_s2: 
+def int_xtensa_ae_mulsq32sp16s_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsq32sp16u_l_s2: 
+def int_xtensa_ae_mulsq32sp16u_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsrfq32sp24s_h_s2: 
+def int_xtensa_ae_mulsrfq32sp24s_h_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulsrfq32sp24s_l_s2: 
+def int_xtensa_ae_mulsrfq32sp24s_l_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulss32f48p16s_hh: 
+def int_xtensa_ae_mulss32f48p16s_hh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulss32f48p16s_hh_s2: 
+def int_xtensa_ae_mulss32f48p16s_hh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulss32f48p16s_lh: 
+def int_xtensa_ae_mulss32f48p16s_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulss32f48p16s_lh_s2: 
+def int_xtensa_ae_mulss32f48p16s_lh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulss32f48p16s_ll: 
+def int_xtensa_ae_mulss32f48p16s_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulss32f48p16s_ll_s2: 
+def int_xtensa_ae_mulss32f48p16s_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssd24_hh_ll: 
+def int_xtensa_ae_mulssd24_hh_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssd24_hh_ll_s2: 
+def int_xtensa_ae_mulssd24_hh_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssd24_hl_lh: 
+def int_xtensa_ae_mulssd24_hl_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssd24_hl_lh_s2: 
+def int_xtensa_ae_mulssd24_hl_lh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssd32x16_h1_l0: 
+def int_xtensa_ae_mulssd32x16_h1_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssd32x16_h1_l0_s2: 
+def int_xtensa_ae_mulssd32x16_h1_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssd32x16_h3_l2: 
+def int_xtensa_ae_mulssd32x16_h3_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssd32x16_h3_l2_s2: 
+def int_xtensa_ae_mulssd32x16_h3_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd16ss_11_00: 
+def int_xtensa_ae_mulssfd16ss_11_00:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd16ss_11_00_s2: 
+def int_xtensa_ae_mulssfd16ss_11_00_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd16ss_13_02: 
+def int_xtensa_ae_mulssfd16ss_13_02:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd16ss_13_02_s2: 
+def int_xtensa_ae_mulssfd16ss_13_02_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd16ss_33_22: 
+def int_xtensa_ae_mulssfd16ss_33_22:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd16ss_33_22_s2: 
+def int_xtensa_ae_mulssfd16ss_33_22_s2:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v4i16_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd24_hh_ll: 
+def int_xtensa_ae_mulssfd24_hh_ll:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd24_hh_ll_s2: 
+def int_xtensa_ae_mulssfd24_hh_ll_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd24_hl_lh: 
+def int_xtensa_ae_mulssfd24_hl_lh:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd24_hl_lh_s2: 
+def int_xtensa_ae_mulssfd24_hl_lh_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v2i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd32x16_h1_l0: 
+def int_xtensa_ae_mulssfd32x16_h1_l0:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd32x16_h1_l0_s2: 
+def int_xtensa_ae_mulssfd32x16_h1_l0_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd32x16_h3_l2: 
+def int_xtensa_ae_mulssfd32x16_h3_l2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_mulssfd32x16_h3_l2_s2: 
+def int_xtensa_ae_mulssfd32x16_h3_l2_s2:
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v2i32_ty, llvm_v4i16_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_mulzaad24_hh_ll: ClangBuiltin<"__builtin_xtensa_ae_mulzaad24_hh_ll">,
@@ -1924,10 +1924,10 @@ def int_xtensa_ae_nsaz32_l: ClangBuiltin<"__builtin_xtensa_ae_nsaz32_l">,
 def int_xtensa_ae_or: ClangBuiltin<"__builtin_xtensa_ae_or">,
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty, llvm_v1i64_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_pksr24: 
+def int_xtensa_ae_pksr24:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v1i64_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>, IntrNoMem]>;
 
-def int_xtensa_ae_pksr32: 
+def int_xtensa_ae_pksr32:
   Intrinsic<[llvm_v2i32_ty], [llvm_v2i32_ty, llvm_v1i64_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>, IntrNoMem]>;
 
 def int_xtensa_ae_round16x4f32sasym: ClangBuiltin<"__builtin_xtensa_ae_round16x4f32sasym">,
@@ -1975,271 +1975,271 @@ def int_xtensa_ae_roundsq32f48sym: ClangBuiltin<"__builtin_xtensa_ae_roundsq32f4
 def int_xtensa_ae_s16_0_i: ClangBuiltin<"__builtin_xtensa_ae_s16_0_i">,
   Intrinsic<[], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s16_0_ip: 
+def int_xtensa_ae_s16_0_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
 def int_xtensa_ae_s16_0_x: ClangBuiltin<"__builtin_xtensa_ae_s16_0_x">,
   Intrinsic<[], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s16_0_xc: 
+def int_xtensa_ae_s16_0_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s16_0_xp: 
+def int_xtensa_ae_s16_0_xp:
   Intrinsic<[llvm_ptr_ty], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_s16m_l_i: ClangBuiltin<"__builtin_xtensa_ae_s16m_l_i">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s16m_l_iu: 
+def int_xtensa_ae_s16m_l_iu:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
 def int_xtensa_ae_s16m_l_x: ClangBuiltin<"__builtin_xtensa_ae_s16m_l_x">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s16m_l_xc: 
+def int_xtensa_ae_s16m_l_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s16m_l_xu: 
+def int_xtensa_ae_s16m_l_xu:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_s16x2m_i: ClangBuiltin<"__builtin_xtensa_ae_s16x2m_i">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s16x2m_iu: 
+def int_xtensa_ae_s16x2m_iu:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
 def int_xtensa_ae_s16x2m_x: ClangBuiltin<"__builtin_xtensa_ae_s16x2m_x">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s16x2m_xc: 
+def int_xtensa_ae_s16x2m_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s16x2m_xu: 
+def int_xtensa_ae_s16x2m_xu:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_s16x4_i: ClangBuiltin<"__builtin_xtensa_ae_s16x4_i">,
   Intrinsic<[], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s16x4_ip: 
+def int_xtensa_ae_s16x4_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s16x4_ric: 
+def int_xtensa_ae_s16x4_ric:
   Intrinsic<[llvm_ptr_ty], [llvm_v4i16_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_s16x4_rip: 
+def int_xtensa_ae_s16x4_rip:
   Intrinsic<[llvm_ptr_ty], [llvm_v4i16_ty, llvm_ptr_ty], []>;
 
 def int_xtensa_ae_s16x4_x: ClangBuiltin<"__builtin_xtensa_ae_s16x4_x">,
   Intrinsic<[], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s16x4_xc: 
+def int_xtensa_ae_s16x4_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s16x4_xp: 
+def int_xtensa_ae_s16x4_xp:
   Intrinsic<[llvm_ptr_ty], [llvm_v4i16_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_s24ra64s_i: ClangBuiltin<"__builtin_xtensa_ae_s24ra64s_i">,
   Intrinsic<[], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s24ra64s_ip: 
+def int_xtensa_ae_s24ra64s_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
 def int_xtensa_ae_s24ra64s_x: ClangBuiltin<"__builtin_xtensa_ae_s24ra64s_x">,
   Intrinsic<[], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s24ra64s_xc: 
+def int_xtensa_ae_s24ra64s_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s24ra64s_xp: 
+def int_xtensa_ae_s24ra64s_xp:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s24x2ra64s_ip: 
+def int_xtensa_ae_s24x2ra64s_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_ptr_ty], []>;
 
 def int_xtensa_ae_s32_l_i: ClangBuiltin<"__builtin_xtensa_ae_s32_l_i">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s32_l_ip: 
+def int_xtensa_ae_s32_l_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
 def int_xtensa_ae_s32_l_x: ClangBuiltin<"__builtin_xtensa_ae_s32_l_x">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32_l_xc: 
+def int_xtensa_ae_s32_l_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32_l_xp: 
+def int_xtensa_ae_s32_l_xp:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_s32f24_l_i: ClangBuiltin<"__builtin_xtensa_ae_s32f24_l_i">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s32f24_l_ip: 
+def int_xtensa_ae_s32f24_l_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
 def int_xtensa_ae_s32f24_l_x: ClangBuiltin<"__builtin_xtensa_ae_s32f24_l_x">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32f24_l_xc: 
+def int_xtensa_ae_s32f24_l_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32f24_l_xp: 
+def int_xtensa_ae_s32f24_l_xp:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_s32m_i: ClangBuiltin<"__builtin_xtensa_ae_s32m_i">,
   Intrinsic<[], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s32m_iu: 
+def int_xtensa_ae_s32m_iu:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
 def int_xtensa_ae_s32m_x: ClangBuiltin<"__builtin_xtensa_ae_s32m_x">,
   Intrinsic<[], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32m_xc: 
+def int_xtensa_ae_s32m_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32m_xu: 
+def int_xtensa_ae_s32m_xu:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_s32ra64s_i: ClangBuiltin<"__builtin_xtensa_ae_s32ra64s_i">,
   Intrinsic<[], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s32ra64s_ip: 
+def int_xtensa_ae_s32ra64s_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
 def int_xtensa_ae_s32ra64s_x: ClangBuiltin<"__builtin_xtensa_ae_s32ra64s_x">,
   Intrinsic<[], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32ra64s_xc: 
+def int_xtensa_ae_s32ra64s_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32ra64s_xp: 
+def int_xtensa_ae_s32ra64s_xp:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_s32x2_i: ClangBuiltin<"__builtin_xtensa_ae_s32x2_i">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s32x2_ip: 
+def int_xtensa_ae_s32x2_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s32x2_ric: 
+def int_xtensa_ae_s32x2_ric:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_s32x2_rip: 
+def int_xtensa_ae_s32x2_rip:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty], []>;
 
 def int_xtensa_ae_s32x2_x: ClangBuiltin<"__builtin_xtensa_ae_s32x2_x">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32x2_xc: 
+def int_xtensa_ae_s32x2_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32x2_xp: 
+def int_xtensa_ae_s32x2_xp:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_ae_s32x2f24_i: ClangBuiltin<"__builtin_xtensa_ae_s32x2f24_i">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s32x2f24_ip: 
+def int_xtensa_ae_s32x2f24_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s32x2f24_ric: 
+def int_xtensa_ae_s32x2f24_ric:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_s32x2f24_rip: 
+def int_xtensa_ae_s32x2f24_rip:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty], []>;
 
 def int_xtensa_ae_s32x2f24_x: ClangBuiltin<"__builtin_xtensa_ae_s32x2f24_x">,
   Intrinsic<[], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32x2f24_xc: 
+def int_xtensa_ae_s32x2f24_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32x2f24_xp: 
+def int_xtensa_ae_s32x2f24_xp:
   Intrinsic<[llvm_ptr_ty], [llvm_v2i32_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s32x2ra64s_ip: 
+def int_xtensa_ae_s32x2ra64s_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_ptr_ty], []>;
 
 def int_xtensa_ae_s64_i: ClangBuiltin<"__builtin_xtensa_ae_s64_i">,
   Intrinsic<[], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
-def int_xtensa_ae_s64_ip: 
+def int_xtensa_ae_s64_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>]>;
 
 def int_xtensa_ae_s64_x: ClangBuiltin<"__builtin_xtensa_ae_s64_x">,
   Intrinsic<[], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s64_xc: 
+def int_xtensa_ae_s64_xc:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_s64_xp: 
+def int_xtensa_ae_s64_xp:
   Intrinsic<[llvm_ptr_ty], [llvm_v1i64_ty, llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_ae_sa16x4_ic: 
+def int_xtensa_ae_sa16x4_ic:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v4i16_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa16x4_ip: 
+def int_xtensa_ae_sa16x4_ip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v4i16_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa16x4_ric: 
+def int_xtensa_ae_sa16x4_ric:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v4i16_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa16x4_rip: 
+def int_xtensa_ae_sa16x4_rip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v4i16_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa24_l_ic: 
+def int_xtensa_ae_sa24_l_ic:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa24_l_ip: 
+def int_xtensa_ae_sa24_l_ip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa24_l_ric: 
+def int_xtensa_ae_sa24_l_ric:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa24_l_rip: 
+def int_xtensa_ae_sa24_l_rip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa24x2_ic: 
+def int_xtensa_ae_sa24x2_ic:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa24x2_ip: 
+def int_xtensa_ae_sa24x2_ip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa24x2_ric: 
+def int_xtensa_ae_sa24x2_ric:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa24x2_rip: 
+def int_xtensa_ae_sa24x2_rip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa32x2_ic: 
+def int_xtensa_ae_sa32x2_ic:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa32x2_ip: 
+def int_xtensa_ae_sa32x2_ip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa32x2_ric: 
+def int_xtensa_ae_sa32x2_ric:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa32x2_rip: 
+def int_xtensa_ae_sa32x2_rip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa32x2f24_ic: 
+def int_xtensa_ae_sa32x2f24_ic:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa32x2f24_ip: 
+def int_xtensa_ae_sa32x2f24_ip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa32x2f24_ric: 
+def int_xtensa_ae_sa32x2f24_ric:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa32x2f24_rip: 
+def int_xtensa_ae_sa32x2f24_rip:
   Intrinsic<[llvm_v8i8_ty, llvm_ptr_ty], [llvm_v2i32_ty, llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa64neg_fp: 
+def int_xtensa_ae_sa64neg_fp:
   Intrinsic<[llvm_v8i8_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
-def int_xtensa_ae_sa64pos_fp: 
+def int_xtensa_ae_sa64pos_fp:
   Intrinsic<[llvm_v8i8_ty], [llvm_v8i8_ty, llvm_ptr_ty], []>;
 
 def int_xtensa_ae_salign64_i: ClangBuiltin<"__builtin_xtensa_ae_salign64_i">,
@@ -2257,31 +2257,31 @@ def int_xtensa_ae_sat48s: ClangBuiltin<"__builtin_xtensa_ae_sat48s">,
 def int_xtensa_ae_satq56s: ClangBuiltin<"__builtin_xtensa_ae_satq56s">,
   Intrinsic<[llvm_v1i64_ty], [llvm_v1i64_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_sb: 
+def int_xtensa_ae_sb:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_sb_ic: 
+def int_xtensa_ae_sb_ic:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_sb_ip: 
+def int_xtensa_ae_sb_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_sbf: 
+def int_xtensa_ae_sbf:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_sbf_ic: 
+def int_xtensa_ae_sbf_ic:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_sbf_ip: 
+def int_xtensa_ae_sbf_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_sbi: 
+def int_xtensa_ae_sbi:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>, IntrNoMem]>;
 
-def int_xtensa_ae_sbi_ic: 
+def int_xtensa_ae_sbi_ic:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>, IntrNoMem]>;
 
-def int_xtensa_ae_sbi_ip: 
+def int_xtensa_ae_sbi_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>, IntrNoMem]>;
 
 def int_xtensa_ae_sel16i: ClangBuiltin<"__builtin_xtensa_ae_sel16i">,
@@ -2482,37 +2482,37 @@ def int_xtensa_ae_trunci32f64s_l: ClangBuiltin<"__builtin_xtensa_ae_trunci32f64s
 def int_xtensa_ae_trunci32x2f64s: ClangBuiltin<"__builtin_xtensa_ae_trunci32x2f64s">,
   Intrinsic<[llvm_v2i32_ty], [llvm_v1i64_ty, llvm_v1i64_ty, llvm_i32_ty], [ImmArg<ArgIndex<2>>, IntrNoMem]>;
 
-def int_xtensa_ae_vldl16c: 
+def int_xtensa_ae_vldl16c:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_vldl16c_ic: 
+def int_xtensa_ae_vldl16c_ic:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_vldl16c_ip: 
+def int_xtensa_ae_vldl16c_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_vldl16t: 
+def int_xtensa_ae_vldl16t:
   Intrinsic<[llvm_v1i1_ty, llvm_i32_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_vldl32t: 
+def int_xtensa_ae_vldl32t:
   Intrinsic<[llvm_v1i1_ty, llvm_i32_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_vldsht: ClangBuiltin<"__builtin_xtensa_ae_vldsht">,
   Intrinsic<[], [llvm_i32_ty], []>;
 
-def int_xtensa_ae_vlel16t: 
+def int_xtensa_ae_vlel16t:
   Intrinsic<[llvm_v1i1_ty, llvm_i32_ty], [llvm_i32_ty, llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_vlel32t: 
+def int_xtensa_ae_vlel32t:
   Intrinsic<[llvm_v1i1_ty, llvm_i32_ty], [llvm_i32_ty, llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_vles16c: 
+def int_xtensa_ae_vles16c:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_vles16c_ic: 
+def int_xtensa_ae_vles16c_ic:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
-def int_xtensa_ae_vles16c_ip: 
+def int_xtensa_ae_vles16c_ip:
   Intrinsic<[llvm_ptr_ty], [llvm_ptr_ty], [IntrNoMem]>;
 
 def int_xtensa_ae_xor: ClangBuiltin<"__builtin_xtensa_ae_xor">,
@@ -2610,4 +2610,3 @@ def int_xtensa_wur_ae_tablesize: ClangBuiltin<"__builtin_xtensa_wur_ae_tablesize
 
 def int_xtensa_wur_ae_ts_fts_bu_bp: ClangBuiltin<"__builtin_xtensa_wur_ae_ts_fts_bu_bp">,
   Intrinsic<[], [llvm_i32_ty], []>;
-

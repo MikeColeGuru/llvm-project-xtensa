@@ -761,4 +761,3 @@ declare void @llvm.xtensa.wur.ua.state.1(i32) nounwind
 declare void @llvm.xtensa.wur.ua.state.2(i32) nounwind
 declare void @llvm.xtensa.wur.ua.state.3(i32) nounwind
 declare void @llvm.xtensa.mv.qr(i32, i32) nounwind
-

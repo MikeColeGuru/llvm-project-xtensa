@@ -324,13 +324,13 @@ def int_xtensa_xt_floor_s: ClangBuiltin<"__builtin_xtensa_xt_floor_s">,
 def int_xtensa_xt_lsi: ClangBuiltin<"__builtin_xtensa_xt_lsi">,
   Intrinsic<[llvm_float_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
-def int_xtensa_xt_lsip: 
+def int_xtensa_xt_lsip:
   Intrinsic<[llvm_float_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], [ImmArg<ArgIndex<1>>]>;
 
 def int_xtensa_xt_lsx: ClangBuiltin<"__builtin_xtensa_xt_lsx">,
   Intrinsic<[llvm_float_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
-def int_xtensa_xt_lsxp: 
+def int_xtensa_xt_lsxp:
   Intrinsic<[llvm_float_ty, llvm_ptr_ty], [llvm_ptr_ty, llvm_i32_ty], []>;
 
 def int_xtensa_xt_madd_s: ClangBuiltin<"__builtin_xtensa_xt_madd_s">,
