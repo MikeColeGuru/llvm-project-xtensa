@@ -30,7 +30,7 @@ def HasSingleFloat          : Predicate<"Subtarget->hasSingleFloat()">,
 def FeatureWindowed         : SubtargetFeature<"windowed", "HasWindowed", "true",
                                                "Enable Xtensa Windowed Register option">;
 def HasWindowed             : Predicate<"Subtarget->hasWindowed()">,
-                                         AssemblerPredicate<(all_of FeatureWindowed)>; 
+                                         AssemblerPredicate<(all_of FeatureWindowed)>;
 
 def FeatureBoolean          : SubtargetFeature<"bool", "HasBoolean", "true",
                                                "Enable Xtensa Boolean extension">;
@@ -211,12 +211,12 @@ def : Proc<"esp32s3", [FeatureDensity, FeatureSingleFloat, FeatureLoop, FeatureM
                        FeatureInterrupt, FeatureRelocatableVector, FeatureTimerInt, FeaturePRID, FeatureRegionProtection, FeatureMiscSR,
                        FeatureMINMAX, FeatureCLAMPS, FeatureESP32S3Ops]>;
 
-def : Proc<"cnl", [FeatureDensity, FeatureSingleFloat, FeatureLoop,  FeatureWindowed, FeatureBoolean, 
+def : Proc<"cnl", [FeatureDensity, FeatureSingleFloat, FeatureLoop,  FeatureWindowed, FeatureBoolean,
                     FeatureSEXT, FeatureNSA, FeatureMul32, FeatureMul32High,  FeatureS32C1I,
-                    FeatureTHREADPTR, FeatureDiv32, FeatureATOMCTL, FeatureMEMCTL, FeatureDebug, 
+                    FeatureTHREADPTR, FeatureDiv32, FeatureATOMCTL, FeatureMEMCTL, FeatureDebug,
                     FeatureException, FeatureHighPriInterrupts, FeatureCoprocessor,
                      FeatureInterrupt, FeatureRelocatableVector, FeatureTimerInt, FeaturePRID,
-                     FeatureRegionProtection, FeatureMiscSR, FeatureHIFI3]>; 
+                     FeatureRegionProtection, FeatureMiscSR, FeatureHIFI3]>;
 
 //===----------------------------------------------------------------------===//
 // Register File Description

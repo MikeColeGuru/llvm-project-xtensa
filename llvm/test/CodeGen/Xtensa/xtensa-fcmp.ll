@@ -15,4 +15,3 @@ if.then:                                          ; preds = %entry
 if.else:                                          ; preds = %entry
   unreachable
 }
-

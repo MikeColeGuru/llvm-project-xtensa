@@ -12294,5 +12294,3 @@ define void @test_xtensa_wur_ae_ts_fts_bu_bp(i32 %art) {
 
 ret void
 }
-
-

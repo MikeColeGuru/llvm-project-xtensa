@@ -274,5 +274,3 @@ std::unique_ptr<TargetCodeGenInfo>
 CodeGen::createXtensaTargetCodeGenInfo(CodeGenModule &CGM) {
   return std::make_unique<XtensaTargetCodeGenInfo>(CGM.getTypes());
 }
-
-

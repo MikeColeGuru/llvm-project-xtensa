@@ -25,8 +25,8 @@ def EE_ANDQ:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xd;
@@ -50,8 +50,8 @@ def EE_BITREV:  EE_Inst24<(outs QR:$qa, AR:$axr), (ins AR:$ax),
 {
   bits<3> qa;
   bits<4> ax;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xd;
@@ -73,8 +73,8 @@ def EE_CMUL_S16:  EE_Inst24<(outs QR:$qz), (ins QR:$qx, QR:$qy, select_4:$sel4),
   bits<3> qx;
   bits<3> qy;
   bits<2> sel4;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qz{2-1};
   let Inst{19-16} = 0xe;
@@ -102,9 +102,9 @@ def EE_CMUL_S16_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz), (ins AR:$as,
   bits<3> qx;
   bits<3> qy;
   bits<2> sel4;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qz{2-0};
@@ -113,7 +113,7 @@ def EE_CMUL_S16_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz), (ins AR:$as,
   let Inst{10-6} = 0x3;
   let Inst{5-4} = sel4{1-0};
   let Inst{3-0} = as{3-0};
-  
+
   let Constraints = "$asr = $as";
 }
 
@@ -131,9 +131,9 @@ def EE_CMUL_S16_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qz), (ins QR:$qv, AR:$as,
   bits<3> qx;
   bits<3> qy;
   bits<2> sel4;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1c8;
   let Inst{19-17} = qz{2-0};
   let Inst{16-14} = qx{2-0};
@@ -162,9 +162,9 @@ def EE_FFT_AMS_S16_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz, QR:$qz1), 
   bits<3> qy;
   bits<3> qm;
   bits<1> sel2;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x34;
   let Inst{22} = sel2{0};
   let Inst{21-20} = qz1{2-1};
@@ -193,9 +193,9 @@ def EE_FFT_AMS_S16_LD_INCP_UAUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz, QR:$q
   bits<3> qy;
   bits<3> qm;
   bits<1> sel2;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x35;
   let Inst{22} = sel2{0};
   let Inst{21-20} = qz1{2-1};
@@ -224,9 +224,9 @@ def EE_FFT_AMS_S16_LD_R32_DECP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz, QR:$qz
   bits<3> qy;
   bits<3> qm;
   bits<1> sel2;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x36;
   let Inst{22} = sel2{0};
   let Inst{21-20} = qz1{2-1};
@@ -255,9 +255,9 @@ def EE_FFT_AMS_S16_ST_INCP:  EE_Inst32<(outs QR:$qz1, AR:$as0r, AR:$asr), (ins Q
   bits<3> qy;
   bits<3> qm;
   bits<1> sel2;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-24} = 0x14;
   let Inst{23} = sel2{0};
   let Inst{22-20} = qz1{2-0};
@@ -284,9 +284,9 @@ def EE_FFT_CMUL_S16_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz), (ins AR:$a
   bits<3> qx;
   bits<3> qy;
   bits<3> sel8;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x37;
   let Inst{22-20} = sel8{2-0};
   let Inst{19-17} = qz{2-0};
@@ -313,9 +313,9 @@ def EE_FFT_CMUL_S16_ST_XP:  EE_Inst32<(outs AR:$asr), (ins QR:$qx, QR:$qy, QR:$q
   bits<3> sel8;
   bits<2> upd4;
   bits<2> sar4;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-24} = 0x15;
   let Inst{23-22} = sar4{1-0};
   let Inst{21-20} = upd4{1-0};
@@ -340,8 +340,8 @@ def EE_FFT_R2BF_S16:  EE_Inst24<(outs QR:$qa0, QR:$qa1), (ins QR:$qx, QR:$qy, se
   bits<3> qx;
   bits<3> qy;
   bits<1> sel2;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qa0{2-1};
   let Inst{19-16} = 0xc;
@@ -369,9 +369,9 @@ def EE_FFT_R2BF_S16_ST_INCP:  EE_Inst32<(outs QR:$qa0, AR:$asr), (ins QR:$qx, QR
   bits<3> qy;
   bits<4> as;
   bits<2> sar4;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1d1;
   let Inst{19-17} = qa0{2-0};
   let Inst{16-14} = qx{2-0};
@@ -393,9 +393,9 @@ def EE_FFT_VST_R32_DECP:  EE_Inst24<(outs AR:$asr), (ins QR:$qv, AR:$as, select_
   bits<3> qv;
   bits<4> as;
   bits<1> sar2;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qv{2-1};
   let Inst{19-16} = 0xd;
@@ -421,9 +421,9 @@ def EE_LDF_128_IP:  EE_Inst32<(outs FPR:$fu3, FPR:$fu2, FPR:$fu1, FPR:$fu0, AR:$
   bits<4> fu0;
   bits<4> as;
   bits<4> imm16f;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-24} = 0x10;
   let Inst{23-20} = fu3{3-0};
   let Inst{19-16} = fu2{3-0};
@@ -447,9 +447,9 @@ def EE_LDF_128_XP:  EE_Inst32<(outs FPR:$fu3, FPR:$fu2, FPR:$fu1, FPR:$fu0, AR:$
   bits<4> fu0;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-24} = 0x11;
   let Inst{23-20} = fu3{3-0};
   let Inst{19-16} = fu2{3-0};
@@ -471,9 +471,9 @@ def EE_LDF_64_IP:  EE_Inst32<(outs FPR:$fu1, FPR:$fu0, AR:$asr), (ins AR:$as, of
   bits<4> fu0;
   bits<4> as;
   bits<8> imm8;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-16} = imm8{7-1};
   let Inst{15-12} = fu1{3-0};
@@ -495,9 +495,9 @@ def EE_LDF_64_XP:  EE_Inst24<(outs FPR:$fu1, FPR:$fu0, AR:$asr), (ins AR:$as, AR
   bits<4> fu0;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-20} = fu0{3-0};
   let Inst{19-16} = 0x6;
   let Inst{15-12} = fu1{3-0};
@@ -516,9 +516,9 @@ def EE_LDQA_S16_128_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16:$i
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0x2;
@@ -537,9 +537,9 @@ def EE_LDQA_S16_128_XP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, AR:$ad),
 {
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-12} = 0x7e4;
   let Inst{11-8} = ad{3-0};
   let Inst{7-4} = as{3-0};
@@ -556,9 +556,9 @@ def EE_LDQA_S8_128_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16:$im
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0x22;
@@ -577,9 +577,9 @@ def EE_LDQA_S8_128_XP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, AR:$ad),
 {
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-12} = 0x714;
   let Inst{11-8} = ad{3-0};
   let Inst{7-4} = as{3-0};
@@ -596,9 +596,9 @@ def EE_LDQA_U16_128_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16:$i
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0xa;
@@ -617,9 +617,9 @@ def EE_LDQA_U16_128_XP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, AR:$ad),
 {
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-12} = 0x7a4;
   let Inst{11-8} = ad{3-0};
   let Inst{7-4} = as{3-0};
@@ -636,9 +636,9 @@ def EE_LDQA_U8_128_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16:$im
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0x2a;
@@ -657,9 +657,9 @@ def EE_LDQA_U8_128_XP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, AR:$ad),
 {
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-12} = 0x704;
   let Inst{11-8} = ad{3-0};
   let Inst{7-4} = as{3-0};
@@ -679,9 +679,9 @@ def EE_LDXQ_32:  EE_Inst32<(outs QR:$qu), (ins QR:$qs, AR:$as, select_4:$sel4, s
   bits<4> as;
   bits<2> sel4;
   bits<3> sel8;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-22} = 0x70;
   let Inst{21-20} = sel4{1-0};
   let Inst{19-17} = qu{2-0};
@@ -702,9 +702,9 @@ def EE_LD_128_USAR_IP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, offset_25
   bits<3> qu;
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x1;
   let Inst{22} = imm16{7};
   let Inst{21-20} = qu{2-1};
@@ -726,9 +726,9 @@ def EE_LD_128_USAR_XP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:$ad),
   bits<3> qu;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -749,9 +749,9 @@ def EE_LD_ACCX_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_8:$imm8),
 {
   bits<4> as;
   bits<8> imm8;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm8{7};
   let Inst{21-15} = 0x1c;
@@ -770,9 +770,9 @@ def EE_LD_QACC_H_H_32_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_4:$
 {
   bits<4> as;
   bits<8> imm4;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm4{7};
   let Inst{21-15} = 0x3c;
@@ -791,9 +791,9 @@ def EE_LD_QACC_H_L_128_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0xc;
@@ -812,9 +812,9 @@ def EE_LD_QACC_L_H_32_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_4:$
 {
   bits<4> as;
   bits<8> imm4;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm4{7};
   let Inst{21-15} = 0x2c;
@@ -833,9 +833,9 @@ def EE_LD_QACC_L_L_128_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0x0;
@@ -854,9 +854,9 @@ def EE_LD_UA_STATE_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16:$im
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0x20;
@@ -876,8 +876,8 @@ def EE_MOVI_32_A:  EE_Inst24<(outs AR:$au), (ins QR:$qs, select_4:$sel4),
   bits<3> qs;
   bits<4> au;
   bits<2> sel4;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs{2-1};
   let Inst{19-16} = 0xd;
@@ -900,8 +900,8 @@ def EE_MOVI_32_Q:  EE_Inst24<(outs QR:$qu), (ins AR:$as, select_4:$sel4),
   bits<3> qu;
   bits<4> as;
   bits<2> sel4;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -922,8 +922,8 @@ def EE_MOV_S16_QACC:  EE_Inst24<(outs), (ins QR:$qs),
                    "ee.mov.s16.qacc\t $qs", []>, Requires<[HasESP32S3Ops]>
 {
   bits<3> qs;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs{2-1};
   let Inst{19-16} = 0xd;
@@ -940,8 +940,8 @@ def EE_MOV_S8_QACC:  EE_Inst24<(outs), (ins QR:$qs),
                    "ee.mov.s8.qacc\t $qs", []>, Requires<[HasESP32S3Ops]>
 {
   bits<3> qs;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs{2-1};
   let Inst{19-16} = 0xd;
@@ -958,8 +958,8 @@ def EE_MOV_U16_QACC:  EE_Inst24<(outs), (ins QR:$qs),
                    "ee.mov.u16.qacc\t $qs", []>, Requires<[HasESP32S3Ops]>
 {
   bits<3> qs;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs{2-1};
   let Inst{19-16} = 0xd;
@@ -976,8 +976,8 @@ def EE_MOV_U8_QACC:  EE_Inst24<(outs), (ins QR:$qs),
                    "ee.mov.u8.qacc\t $qs", []>, Requires<[HasESP32S3Ops]>
 {
   bits<3> qs;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs{2-1};
   let Inst{19-16} = 0xd;
@@ -995,8 +995,8 @@ def EE_NOTQ:  EE_Inst24<(outs QR:$qa), (ins QR:$qx),
 {
   bits<3> qa;
   bits<3> qx;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xd;
@@ -1019,8 +1019,8 @@ def EE_ORQ:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xd;
@@ -1045,8 +1045,8 @@ def EE_SLCI_2Q:  EE_Inst24<(outs QR:$qs1r, QR:$qs0r), (ins QR:$qs1, QR:$qs0, sel
   bits<3> qs1;
   bits<3> qs0;
   bits<4> sar16;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -1069,8 +1069,8 @@ def EE_SLCXXP_2Q:  EE_Inst24<(outs QR:$qs1r, QR:$qs0r, AR:$asr), (ins QR:$qs1, Q
   bits<3> qs0;
   bits<4> as;
   bits<4> ad;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0x6;
@@ -1092,8 +1092,8 @@ def EE_SRCI_2Q:  EE_Inst24<(outs QR:$qs1r, QR:$qs0r), (ins QR:$qs1, QR:$qs0, sel
   bits<3> qs1;
   bits<3> qs0;
   bits<4> sar16;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -1115,8 +1115,8 @@ def EE_SRCMB_S16_QACC:  EE_Inst24<(outs QR:$qu), (ins AR:$as, select_2:$sel2),
   bits<3> qu;
   bits<4> as;
   bits<1> sel2;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -1139,8 +1139,8 @@ def EE_SRCMB_S8_QACC:  EE_Inst24<(outs QR:$qu), (ins AR:$as, select_2:$sel2),
   bits<3> qu;
   bits<4> as;
   bits<1> sel2;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -1163,9 +1163,9 @@ def EE_SRCQ_128_ST_INCP:  EE_Inst24<(outs AR:$asr), (ins QR:$qs0, QR:$qs1, AR:$a
   bits<3> qs0;
   bits<3> qs1;
   bits<4> as;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -1188,8 +1188,8 @@ def EE_SRCXXP_2Q:  EE_Inst24<(outs QR:$qs1r, QR:$qs0r, AR:$asr), (ins QR:$qs1, Q
   bits<3> qs0;
   bits<4> as;
   bits<4> ad;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0x6;
@@ -1211,8 +1211,8 @@ def EE_SRC_Q:  EE_Inst24<(outs QR:$qa), (ins QR:$qs0, QR:$qs1),
   bits<3> qa;
   bits<3> qs0;
   bits<3> qs1;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -1236,9 +1236,9 @@ def EE_SRC_Q_LD_IP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (ins AR:$as, of
   bits<8> imm16;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = imm16{7-5};
   let Inst{19-17} = qu{2-0};
@@ -1263,9 +1263,9 @@ def EE_SRC_Q_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (ins AR:$as, AR
   bits<4> ad;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-20} = 0x1d0;
   let Inst{19-17} = qu{2-0};
   let Inst{16-14} = qs0{2-0};
@@ -1286,8 +1286,8 @@ def EE_SRC_Q_QUP:  EE_Inst24<(outs QR:$qa, QR:$qs0r), (ins QR:$qs0, QR:$qs1),
   bits<3> qa;
   bits<3> qs0;
   bits<3> qs1;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -1309,8 +1309,8 @@ def EE_SRS_ACCX:  EE_Inst24<(outs AR:$au), (ins AR:$as, select_2:$sel2),
   bits<4> au;
   bits<4> as;
   bits<1> sel2;
-  
-  
+
+
   let Inst{23-15} = 0xfc;
   let Inst{14} = sel2{0};
   let Inst{13-12} = 0x1;
@@ -1333,9 +1333,9 @@ def EE_STF_128_IP:  EE_Inst32<(outs AR:$asr), (ins FPR:$fv3, FPR:$fv2, FPR:$fv1,
   bits<4> fv0;
   bits<4> as;
   bits<4> imm16f;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-24} = 0x12;
   let Inst{23-20} = fv3{3-0};
   let Inst{19-16} = fv2{3-0};
@@ -1359,9 +1359,9 @@ def EE_STF_128_XP:  EE_Inst32<(outs AR:$asr), (ins FPR:$fv3, FPR:$fv2, FPR:$fv1,
   bits<4> fv0;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-24} = 0x13;
   let Inst{23-20} = fv3{3-0};
   let Inst{19-16} = fv2{3-0};
@@ -1383,9 +1383,9 @@ def EE_STF_64_IP:  EE_Inst32<(outs AR:$asr), (ins FPR:$fv1, FPR:$fv0, AR:$as, of
   bits<4> fv0;
   bits<4> as;
   bits<8> imm8;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-16} = imm8{7-1};
   let Inst{15-12} = fv1{3-0};
@@ -1407,9 +1407,9 @@ def EE_STF_64_XP:  EE_Inst24<(outs AR:$asr), (ins FPR:$fv1, FPR:$fv0, AR:$as, AR
   bits<4> fv0;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23-20} = fv0{3-0};
   let Inst{19-16} = 0x7;
   let Inst{15-12} = fv1{3-0};
@@ -1431,9 +1431,9 @@ def EE_STXQ_32:  EE_Inst32<(outs), (ins QR:$qv, QR:$qs, AR:$as, select_4:$sel4, 
   bits<4> as;
   bits<2> sel4;
   bits<3> sel8;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-22} = 0x73;
   let Inst{21-20} = sel4{1-0};
   let Inst{19-17} = 0x0;
@@ -1454,9 +1454,9 @@ def EE_ST_ACCX_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_8:$imm8),
 {
   bits<4> as;
   bits<8> imm8;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm8{7};
   let Inst{21-15} = 0x4;
@@ -1475,9 +1475,9 @@ def EE_ST_QACC_H_H_32_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_4:$
 {
   bits<4> as;
   bits<8> imm4;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm4{7};
   let Inst{21-15} = 0x24;
@@ -1496,9 +1496,9 @@ def EE_ST_QACC_H_L_128_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0x1a;
@@ -1517,9 +1517,9 @@ def EE_ST_QACC_L_H_32_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_4:$
 {
   bits<4> as;
   bits<8> imm4;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm4{7};
   let Inst{21-15} = 0x3a;
@@ -1538,9 +1538,9 @@ def EE_ST_QACC_L_L_128_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0x18;
@@ -1559,9 +1559,9 @@ def EE_ST_UA_STATE_IP:  EE_Inst24<(outs AR:$asr), (ins AR:$as, offset_256_16:$im
 {
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23} = 0x0;
   let Inst{22} = imm16{7};
   let Inst{21-15} = 0x38;
@@ -1581,8 +1581,8 @@ def EE_VADDS_S16:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1607,9 +1607,9 @@ def EE_VADDS_S16_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -1632,9 +1632,9 @@ def EE_VADDS_S16_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1c9;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -1655,8 +1655,8 @@ def EE_VADDS_S32:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1681,9 +1681,9 @@ def EE_VADDS_S32_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -1706,9 +1706,9 @@ def EE_VADDS_S32_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1c9;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -1729,8 +1729,8 @@ def EE_VADDS_S8:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1755,9 +1755,9 @@ def EE_VADDS_S8_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -1780,9 +1780,9 @@ def EE_VADDS_S8_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1c9;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -1803,8 +1803,8 @@ def EE_VCMP_EQ_S16:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1827,8 +1827,8 @@ def EE_VCMP_EQ_S32:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1851,8 +1851,8 @@ def EE_VCMP_EQ_S8:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1875,8 +1875,8 @@ def EE_VCMP_GT_S16:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1899,8 +1899,8 @@ def EE_VCMP_GT_S32:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1923,8 +1923,8 @@ def EE_VCMP_GT_S8:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1947,8 +1947,8 @@ def EE_VCMP_LT_S16:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1971,8 +1971,8 @@ def EE_VCMP_LT_S32:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -1995,8 +1995,8 @@ def EE_VCMP_LT_S8:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -2018,9 +2018,9 @@ def EE_VLDBC_16:  EE_Inst24<(outs QR:$qu), (ins AR:$as),
 {
   bits<3> qu;
   bits<4> as;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -2041,9 +2041,9 @@ def EE_VLDBC_16_IP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, offset_128_2
   bits<3> qu;
   bits<4> as;
   bits<7> imm2;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0x5;
@@ -2064,9 +2064,9 @@ def EE_VLDBC_16_XP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:$ad),
   bits<3> qu;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -2087,9 +2087,9 @@ def EE_VLDBC_32:  EE_Inst24<(outs QR:$qu), (ins AR:$as),
 {
   bits<3> qu;
   bits<4> as;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -2110,9 +2110,9 @@ def EE_VLDBC_32_IP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, offset_256_4
   bits<3> qu;
   bits<4> as;
   bits<8> imm4;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x1;
   let Inst{22} = imm4{7};
   let Inst{21-20} = qu{2-1};
@@ -2134,9 +2134,9 @@ def EE_VLDBC_32_XP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:$ad),
   bits<3> qu;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -2157,9 +2157,9 @@ def EE_VLDBC_8:  EE_Inst24<(outs QR:$qu), (ins AR:$as),
 {
   bits<3> qu;
   bits<4> as;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -2180,9 +2180,9 @@ def EE_VLDBC_8_IP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, offset_128_1:
   bits<3> qu;
   bits<4> as;
   bits<7> imm1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0x5;
@@ -2203,9 +2203,9 @@ def EE_VLDBC_8_XP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:$ad),
   bits<3> qu;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -2227,9 +2227,9 @@ def EE_VLDHBC_16_INCP:  EE_Inst24<(outs QR:$qu, QR:$qu1, AR:$asr), (ins AR:$as),
   bits<3> qu;
   bits<3> qu1;
   bits<4> as;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xc;
@@ -2251,9 +2251,9 @@ def EE_VLD_128_IP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, offset_256_16
   bits<3> qu;
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x1;
   let Inst{22} = imm16{7};
   let Inst{21-20} = qu{2-1};
@@ -2275,9 +2275,9 @@ def EE_VLD_128_XP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:$ad),
   bits<3> qu;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -2299,9 +2299,9 @@ def EE_VLD_H_64_IP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, offset_256_8
   bits<3> qu;
   bits<4> as;
   bits<8> imm8;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x1;
   let Inst{22} = imm8{7};
   let Inst{21-20} = qu{2-1};
@@ -2323,9 +2323,9 @@ def EE_VLD_H_64_XP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:$ad),
   bits<3> qu;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -2347,9 +2347,9 @@ def EE_VLD_L_64_IP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, offset_256_8
   bits<3> qu;
   bits<4> as;
   bits<8> imm8;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23} = 0x1;
   let Inst{22} = imm8{7};
   let Inst{21-20} = qu{2-1};
@@ -2371,9 +2371,9 @@ def EE_VLD_L_64_XP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:$ad),
   bits<3> qu;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qu{2-1};
   let Inst{19-16} = 0xd;
@@ -2395,8 +2395,8 @@ def EE_VMAX_S16:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -2421,9 +2421,9 @@ def EE_VMAX_S16_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -2446,9 +2446,9 @@ def EE_VMAX_S16_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1c9;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -2469,8 +2469,8 @@ def EE_VMAX_S32:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -2495,9 +2495,9 @@ def EE_VMAX_S32_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -2520,9 +2520,9 @@ def EE_VMAX_S32_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1ca;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -2543,8 +2543,8 @@ def EE_VMAX_S8:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -2569,9 +2569,9 @@ def EE_VMAX_S8_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as, 
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -2594,9 +2594,9 @@ def EE_VMAX_S8_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as, 
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1cb;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -2617,8 +2617,8 @@ def EE_VMIN_S16:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -2643,9 +2643,9 @@ def EE_VMIN_S16_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -2668,9 +2668,9 @@ def EE_VMIN_S16_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1ca;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -2691,8 +2691,8 @@ def EE_VMIN_S32:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -2717,9 +2717,9 @@ def EE_VMIN_S32_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -2742,9 +2742,9 @@ def EE_VMIN_S32_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1cb;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -2765,8 +2765,8 @@ def EE_VMIN_S8:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -2791,9 +2791,9 @@ def EE_VMIN_S8_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as, 
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -2816,9 +2816,9 @@ def EE_VMIN_S8_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as, 
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1ca;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -2838,8 +2838,8 @@ def EE_VMULAS_S16_ACCX:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy),
 {
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-15} = 0x34;
   let Inst{14} = qy{2};
   let Inst{13} = 0x0;
@@ -2861,9 +2861,9 @@ def EE_VMULAS_S16_ACCX_LD_IP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, of
   bits<8> imm16;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0xf;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -2890,9 +2890,9 @@ def EE_VMULAS_S16_ACCX_LD_IP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0x0;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -2917,9 +2917,9 @@ def EE_VMULAS_S16_ACCX_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, AR
   bits<4> ad;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x3c;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = 0x0;
@@ -2945,9 +2945,9 @@ def EE_VMULAS_S16_ACCX_LD_XP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x2c;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -2968,8 +2968,8 @@ def EE_VMULAS_S16_QACC:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy),
 {
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-15} = 0x34;
   let Inst{14} = qy{2};
   let Inst{13} = 0x1;
@@ -2990,9 +2990,9 @@ def EE_VMULAS_S16_QACC_LDBC_INCP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as
   bits<4> as;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-21} = 0x4;
   let Inst{20} = qu{2};
   let Inst{19-16} = 0x7;
@@ -3019,9 +3019,9 @@ def EE_VMULAS_S16_QACC_LDBC_INCP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3045,9 +3045,9 @@ def EE_VMULAS_S16_QACC_LD_IP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, of
   bits<8> imm16;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0xf;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3074,9 +3074,9 @@ def EE_VMULAS_S16_QACC_LD_IP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0x1;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3101,9 +3101,9 @@ def EE_VMULAS_S16_QACC_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, AR
   bits<4> ad;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x3c;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = 0x1;
@@ -3129,9 +3129,9 @@ def EE_VMULAS_S16_QACC_LD_XP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x2d;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3152,8 +3152,8 @@ def EE_VMULAS_S8_ACCX:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy),
 {
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-15} = 0x34;
   let Inst{14} = qy{2};
   let Inst{13} = 0x0;
@@ -3175,9 +3175,9 @@ def EE_VMULAS_S8_ACCX_LD_IP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, off
   bits<8> imm16;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0xf;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3204,9 +3204,9 @@ def EE_VMULAS_S8_ACCX_LD_IP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (i
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0x2;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3231,9 +3231,9 @@ def EE_VMULAS_S8_ACCX_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:
   bits<4> ad;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x3c;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = 0x2;
@@ -3259,9 +3259,9 @@ def EE_VMULAS_S8_ACCX_LD_XP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (i
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x2e;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3282,8 +3282,8 @@ def EE_VMULAS_S8_QACC:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy),
 {
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-15} = 0x34;
   let Inst{14} = qy{2};
   let Inst{13} = 0x1;
@@ -3304,9 +3304,9 @@ def EE_VMULAS_S8_QACC_LDBC_INCP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as,
   bits<4> as;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-21} = 0x5;
   let Inst{20} = qu{2};
   let Inst{19-16} = 0x7;
@@ -3333,9 +3333,9 @@ def EE_VMULAS_S8_QACC_LDBC_INCP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r)
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3359,9 +3359,9 @@ def EE_VMULAS_S8_QACC_LD_IP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, off
   bits<8> imm16;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0xf;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3388,9 +3388,9 @@ def EE_VMULAS_S8_QACC_LD_IP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (i
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0x3;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3415,9 +3415,9 @@ def EE_VMULAS_S8_QACC_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:
   bits<4> ad;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x3c;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = 0x3;
@@ -3443,9 +3443,9 @@ def EE_VMULAS_S8_QACC_LD_XP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (i
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x2f;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3466,8 +3466,8 @@ def EE_VMULAS_U16_ACCX:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy),
 {
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-15} = 0x14;
   let Inst{14} = qy{2};
   let Inst{13} = 0x0;
@@ -3489,9 +3489,9 @@ def EE_VMULAS_U16_ACCX_LD_IP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, of
   bits<8> imm16;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0xf;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3518,9 +3518,9 @@ def EE_VMULAS_U16_ACCX_LD_IP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0x4;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3545,9 +3545,9 @@ def EE_VMULAS_U16_ACCX_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, AR
   bits<4> ad;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x3c;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = 0x4;
@@ -3573,9 +3573,9 @@ def EE_VMULAS_U16_ACCX_LD_XP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x30;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3596,8 +3596,8 @@ def EE_VMULAS_U16_QACC:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy),
 {
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-15} = 0x14;
   let Inst{14} = qy{2};
   let Inst{13} = 0x1;
@@ -3618,9 +3618,9 @@ def EE_VMULAS_U16_QACC_LDBC_INCP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as
   bits<4> as;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-21} = 0x6;
   let Inst{20} = qu{2};
   let Inst{19-16} = 0x7;
@@ -3647,9 +3647,9 @@ def EE_VMULAS_U16_QACC_LDBC_INCP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3673,9 +3673,9 @@ def EE_VMULAS_U16_QACC_LD_IP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, of
   bits<8> imm16;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0xf;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3702,9 +3702,9 @@ def EE_VMULAS_U16_QACC_LD_IP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0x5;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3729,9 +3729,9 @@ def EE_VMULAS_U16_QACC_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, AR
   bits<4> ad;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x3c;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = 0x5;
@@ -3757,9 +3757,9 @@ def EE_VMULAS_U16_QACC_LD_XP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x31;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3780,8 +3780,8 @@ def EE_VMULAS_U8_ACCX:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy),
 {
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-15} = 0x14;
   let Inst{14} = qy{2};
   let Inst{13} = 0x0;
@@ -3803,9 +3803,9 @@ def EE_VMULAS_U8_ACCX_LD_IP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, off
   bits<8> imm16;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0xf;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3832,9 +3832,9 @@ def EE_VMULAS_U8_ACCX_LD_IP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (i
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0x6;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -3859,9 +3859,9 @@ def EE_VMULAS_U8_ACCX_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:
   bits<4> ad;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x3c;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = 0x6;
@@ -3887,9 +3887,9 @@ def EE_VMULAS_U8_ACCX_LD_XP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (i
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x32;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3910,8 +3910,8 @@ def EE_VMULAS_U8_QACC:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy),
 {
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-15} = 0x14;
   let Inst{14} = qy{2};
   let Inst{13} = 0x1;
@@ -3932,9 +3932,9 @@ def EE_VMULAS_U8_QACC_LDBC_INCP:  EE_Inst24<(outs QR:$qu, AR:$asr), (ins AR:$as,
   bits<4> as;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{23-21} = 0x7;
   let Inst{20} = qu{2};
   let Inst{19-16} = 0x7;
@@ -3961,9 +3961,9 @@ def EE_VMULAS_U8_QACC_LDBC_INCP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r)
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -3987,9 +3987,9 @@ def EE_VMULAS_U8_QACC_LD_IP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, off
   bits<8> imm16;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0xf;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -4016,9 +4016,9 @@ def EE_VMULAS_U8_QACC_LD_IP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (i
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-25} = 0x7;
   let Inst{24-23} = imm16{5-4};
   let Inst{22-20} = qu{2-0};
@@ -4043,9 +4043,9 @@ def EE_VMULAS_U8_QACC_LD_XP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, AR:
   bits<4> ad;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x3c;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = 0x7;
@@ -4071,9 +4071,9 @@ def EE_VMULAS_U8_QACC_LD_XP_QUP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qs0r), (i
   bits<3> qy;
   bits<3> qs0;
   bits<3> qs1;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x33;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qs1{2-0};
@@ -4095,8 +4095,8 @@ def EE_VMUL_S16:  EE_Inst24<(outs QR:$qz), (ins QR:$qx, QR:$qy),
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qz{2-1};
   let Inst{19-16} = 0xe;
@@ -4121,9 +4121,9 @@ def EE_VMUL_S16_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz), (ins AR:$as,
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qz{2-0};
@@ -4146,9 +4146,9 @@ def EE_VMUL_S16_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qz), (ins QR:$qv, AR:$as,
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1cb;
   let Inst{19-17} = qz{2-0};
   let Inst{16-14} = qx{2-0};
@@ -4169,8 +4169,8 @@ def EE_VMUL_S8:  EE_Inst24<(outs QR:$qz), (ins QR:$qx, QR:$qy),
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qz{2-1};
   let Inst{19-16} = 0xe;
@@ -4195,9 +4195,9 @@ def EE_VMUL_S8_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz), (ins AR:$as, 
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qz{2-0};
@@ -4220,9 +4220,9 @@ def EE_VMUL_S8_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qz), (ins QR:$qv, AR:$as, 
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1ca;
   let Inst{19-17} = qz{2-0};
   let Inst{16-14} = qx{2-0};
@@ -4243,8 +4243,8 @@ def EE_VMUL_U16:  EE_Inst24<(outs QR:$qz), (ins QR:$qx, QR:$qy),
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qz{2-1};
   let Inst{19-16} = 0xe;
@@ -4269,9 +4269,9 @@ def EE_VMUL_U16_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz), (ins AR:$as,
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qz{2-0};
@@ -4294,9 +4294,9 @@ def EE_VMUL_U16_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qz), (ins QR:$qv, AR:$as,
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1cb;
   let Inst{19-17} = qz{2-0};
   let Inst{16-14} = qx{2-0};
@@ -4317,8 +4317,8 @@ def EE_VMUL_U8:  EE_Inst24<(outs QR:$qz), (ins QR:$qx, QR:$qy),
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qz{2-1};
   let Inst{19-16} = 0xe;
@@ -4343,9 +4343,9 @@ def EE_VMUL_U8_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qz), (ins AR:$as, 
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qz{2-0};
@@ -4368,9 +4368,9 @@ def EE_VMUL_U8_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qz), (ins QR:$qv, AR:$as, 
   bits<3> qz;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1d1;
   let Inst{19-17} = qz{2-0};
   let Inst{16-14} = qx{2-0};
@@ -4392,8 +4392,8 @@ def EE_VPRELU_S16:  EE_Inst24<(outs QR:$qz), (ins QR:$qx, QR:$qy, AR:$ay),
   bits<3> qx;
   bits<3> qy;
   bits<4> ay;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qz{2-1};
   let Inst{19-16} = 0xc;
@@ -4418,8 +4418,8 @@ def EE_VPRELU_S8:  EE_Inst24<(outs QR:$qz), (ins QR:$qx, QR:$qy, AR:$ay),
   bits<3> qx;
   bits<3> qy;
   bits<4> ay;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qz{2-1};
   let Inst{19-16} = 0xc;
@@ -4443,8 +4443,8 @@ def EE_VRELU_S16:  EE_Inst24<(outs QR:$qsr), (ins QR:$qs, AR:$ax, AR:$ay),
   bits<3> qs;
   bits<4> ax;
   bits<4> ay;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs{2-1};
   let Inst{19-16} = 0xd;
@@ -4466,8 +4466,8 @@ def EE_VRELU_S8:  EE_Inst24<(outs QR:$qsr), (ins QR:$qs, AR:$ax, AR:$ay),
   bits<3> qs;
   bits<4> ax;
   bits<4> ay;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs{2-1};
   let Inst{19-16} = 0xd;
@@ -4488,8 +4488,8 @@ def EE_VSL_32:  EE_Inst24<(outs QR:$qa), (ins QR:$qs),
 {
   bits<3> qa;
   bits<3> qs;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs{2-1};
   let Inst{19-16} = 0xd;
@@ -4510,8 +4510,8 @@ def EE_VSMULAS_S16_QACC:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy, select_8:$sel8)
   bits<3> qx;
   bits<3> qy;
   bits<3> sel8;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = sel8{2-1};
   let Inst{19-16} = 0xe;
@@ -4536,9 +4536,9 @@ def EE_VSMULAS_S16_QACC_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as,
   bits<3> qx;
   bits<3> qy;
   bits<3> sel8;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = sel8{2-0};
@@ -4559,8 +4559,8 @@ def EE_VSMULAS_S8_QACC:  EE_Inst24<(outs), (ins QR:$qx, QR:$qy, select_16:$sel16
   bits<3> qx;
   bits<3> qy;
   bits<4> sel16;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = sel16{3-2};
   let Inst{19-16} = 0xe;
@@ -4587,9 +4587,9 @@ def EE_VSMULAS_S8_QACC_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr), (ins AR:$as, 
   bits<3> qx;
   bits<3> qy;
   bits<4> sel16;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = sel16{3-1};
@@ -4611,8 +4611,8 @@ def EE_VSR_32:  EE_Inst24<(outs QR:$qa), (ins QR:$qs),
 {
   bits<3> qa;
   bits<3> qs;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs{2-1};
   let Inst{19-16} = 0xd;
@@ -4633,9 +4633,9 @@ def EE_VST_128_IP:  EE_Inst24<(outs AR:$asr), (ins QR:$qv, AR:$as, offset_256_16
   bits<3> qv;
   bits<4> as;
   bits<8> imm16;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23} = 0x1;
   let Inst{22} = imm16{7};
   let Inst{21-20} = qv{2-1};
@@ -4657,9 +4657,9 @@ def EE_VST_128_XP:  EE_Inst24<(outs AR:$asr), (ins QR:$qv, AR:$as, AR:$ad),
   bits<3> qv;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qv{2-1};
   let Inst{19-16} = 0xd;
@@ -4681,9 +4681,9 @@ def EE_VST_H_64_IP:  EE_Inst24<(outs AR:$asr), (ins QR:$qv, AR:$as, offset_256_8
   bits<3> qv;
   bits<4> as;
   bits<8> imm8;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23} = 0x1;
   let Inst{22} = imm8{7};
   let Inst{21-20} = qv{2-1};
@@ -4705,9 +4705,9 @@ def EE_VST_H_64_XP:  EE_Inst24<(outs AR:$asr), (ins QR:$qv, AR:$as, AR:$ad),
   bits<3> qv;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qv{2-1};
   let Inst{19-16} = 0xd;
@@ -4729,9 +4729,9 @@ def EE_VST_L_64_IP:  EE_Inst24<(outs AR:$asr), (ins QR:$qv, AR:$as, offset_256_8
   bits<3> qv;
   bits<4> as;
   bits<8> imm8;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23} = 0x1;
   let Inst{22} = imm8{7};
   let Inst{21-20} = qv{2-1};
@@ -4753,9 +4753,9 @@ def EE_VST_L_64_XP:  EE_Inst24<(outs AR:$asr), (ins QR:$qv, AR:$as, AR:$ad),
   bits<3> qv;
   bits<4> as;
   bits<4> ad;
-  
+
   let mayStore = 1;
-  
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qv{2-1};
   let Inst{19-16} = 0xd;
@@ -4777,8 +4777,8 @@ def EE_VSUBS_S16:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -4803,9 +4803,9 @@ def EE_VSUBS_S16_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -4828,9 +4828,9 @@ def EE_VSUBS_S16_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1d1;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -4851,8 +4851,8 @@ def EE_VSUBS_S32:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -4877,9 +4877,9 @@ def EE_VSUBS_S32_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -4902,9 +4902,9 @@ def EE_VSUBS_S32_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1d1;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -4925,8 +4925,8 @@ def EE_VSUBS_S8:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xe;
@@ -4951,9 +4951,9 @@ def EE_VSUBS_S8_LD_INCP:  EE_Inst32<(outs QR:$qu, AR:$asr, QR:$qa), (ins AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayLoad = 1;
-  
+
   let Inst{28-23} = 0x38;
   let Inst{22-20} = qu{2-0};
   let Inst{19-17} = qa{2-0};
@@ -4976,9 +4976,9 @@ def EE_VSUBS_S8_ST_INCP:  EE_Inst32<(outs AR:$asr, QR:$qa), (ins QR:$qv, AR:$as,
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
+
   let mayStore = 1;
-  
+
   let Inst{28-20} = 0x1d1;
   let Inst{19-17} = qa{2-0};
   let Inst{16-14} = qx{2-0};
@@ -4998,8 +4998,8 @@ def EE_VUNZIP_16:  EE_Inst24<(outs QR:$qs0r, QR:$qs1r), (ins QR:$qs0, QR:$qs1),
 {
   bits<3> qs0;
   bits<3> qs1;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -5018,8 +5018,8 @@ def EE_VUNZIP_32:  EE_Inst24<(outs QR:$qs0r, QR:$qs1r), (ins QR:$qs0, QR:$qs1),
 {
   bits<3> qs0;
   bits<3> qs1;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -5038,8 +5038,8 @@ def EE_VUNZIP_8:  EE_Inst24<(outs QR:$qs0r, QR:$qs1r), (ins QR:$qs0, QR:$qs1),
 {
   bits<3> qs0;
   bits<3> qs1;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -5058,8 +5058,8 @@ def EE_VZIP_16:  EE_Inst24<(outs QR:$qs0r, QR:$qs1r), (ins QR:$qs0, QR:$qs1),
 {
   bits<3> qs0;
   bits<3> qs1;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -5078,8 +5078,8 @@ def EE_VZIP_32:  EE_Inst24<(outs QR:$qs0r, QR:$qs1r), (ins QR:$qs0, QR:$qs1),
 {
   bits<3> qs0;
   bits<3> qs1;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -5098,8 +5098,8 @@ def EE_VZIP_8:  EE_Inst24<(outs QR:$qs0r, QR:$qs1r), (ins QR:$qs0, QR:$qs1),
 {
   bits<3> qs0;
   bits<3> qs1;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qs1{2-1};
   let Inst{19-16} = 0xc;
@@ -5119,8 +5119,8 @@ def EE_XORQ:  EE_Inst24<(outs QR:$qa), (ins QR:$qx, QR:$qy),
   bits<3> qa;
   bits<3> qx;
   bits<3> qy;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xd;
@@ -5142,8 +5142,8 @@ def EE_XORQ_P : Pseudo<(outs), (ins imm8:$qa, imm8:$qx, imm8:$qy),
 def EE_ZERO_ACCX:  EE_Inst24<(outs), (ins),
                    "ee.zero.accx\t", []>, Requires<[HasESP32S3Ops]>
 {
-  
-  
+
+
   let Inst{23-0} = 0x250804;
 }
 
@@ -5156,8 +5156,8 @@ def EE_ZERO_Q:  EE_Inst24<(outs QR:$qa), (ins),
                    "ee.zero.q\t $qa", []>, Requires<[HasESP32S3Ops]>
 {
   bits<3> qa;
-  
-  
+
+
   let Inst{23-22} = 0x3;
   let Inst{21-20} = qa{2-1};
   let Inst{19-16} = 0xd;
@@ -5173,8 +5173,8 @@ def EE_ZERO_Q_P : Pseudo<(outs), (ins imm8:$qa),
 def EE_ZERO_QACC:  EE_Inst24<(outs), (ins),
                    "ee.zero.qacc\t", []>, Requires<[HasESP32S3Ops]>
 {
-  
-  
+
+
   let Inst{23-0} = 0x250844;
 }
 
@@ -5187,8 +5187,8 @@ def RUR_ACCX_0:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.accx_0\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x0;
@@ -5200,8 +5200,8 @@ def RUR_ACCX_1:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.accx_1\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x10;
@@ -5213,8 +5213,8 @@ def RUR_FFT_BIT_WIDTH:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.fft_bit_width\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0xe0;
@@ -5226,8 +5226,8 @@ def RUR_GPIO_OUT:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.gpio_out\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0xc0;
@@ -5239,8 +5239,8 @@ def RUR_QACC_H_0:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_h_0\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x20;
@@ -5252,8 +5252,8 @@ def RUR_QACC_H_1:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_h_1\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x30;
@@ -5265,8 +5265,8 @@ def RUR_QACC_H_2:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_h_2\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x40;
@@ -5278,8 +5278,8 @@ def RUR_QACC_H_3:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_h_3\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x50;
@@ -5291,8 +5291,8 @@ def RUR_QACC_H_4:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_h_4\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x60;
@@ -5304,8 +5304,8 @@ def RUR_QACC_L_0:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_l_0\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x70;
@@ -5317,8 +5317,8 @@ def RUR_QACC_L_1:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_l_1\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x80;
@@ -5330,8 +5330,8 @@ def RUR_QACC_L_2:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_l_2\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x90;
@@ -5343,8 +5343,8 @@ def RUR_QACC_L_3:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_l_3\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0xa0;
@@ -5356,8 +5356,8 @@ def RUR_QACC_L_4:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.qacc_l_4\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0xb0;
@@ -5369,8 +5369,8 @@ def RUR_SAR_BYTE:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.sar_byte\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0xd0;
@@ -5382,8 +5382,8 @@ def RUR_UA_STATE_0:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.ua_state_0\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0xf0;
@@ -5395,8 +5395,8 @@ def RUR_UA_STATE_1:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.ua_state_1\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x100;
@@ -5408,8 +5408,8 @@ def RUR_UA_STATE_2:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.ua_state_2\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x110;
@@ -5421,8 +5421,8 @@ def RUR_UA_STATE_3:  EE_Inst24<(outs AR:$arr), (ins),
                    "rur.ua_state_3\t $arr", []>, Requires<[HasESP32S3Ops]>
 {
   bits<4> arr;
-  
-  
+
+
   let Inst{23-16} = 0xe3;
   let Inst{15-12} = arr{3-0};
   let Inst{11-0} = 0x120;
@@ -5434,8 +5434,8 @@ def WUR_ACCX_0:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.accx_0\t $art", [(int_xtensa_wur_accx_0 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf300;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5445,8 +5445,8 @@ def WUR_ACCX_1:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.accx_1\t $art", [(int_xtensa_wur_accx_1 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf301;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5456,8 +5456,8 @@ def WUR_FFT_BIT_WIDTH:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.fft_bit_width\t $art", [(int_xtensa_wur_fft_bit_width AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf30e;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5467,8 +5467,8 @@ def WUR_GPIO_OUT:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.gpio_out\t $art", [(int_xtensa_wur_gpio_out AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf30c;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5478,8 +5478,8 @@ def WUR_QACC_H_0:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_h_0\t $art", [(int_xtensa_wur_qacc_h_0 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf302;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5489,8 +5489,8 @@ def WUR_QACC_H_1:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_h_1\t $art", [(int_xtensa_wur_qacc_h_1 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf303;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5500,8 +5500,8 @@ def WUR_QACC_H_2:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_h_2\t $art", [(int_xtensa_wur_qacc_h_2 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf304;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5511,8 +5511,8 @@ def WUR_QACC_H_3:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_h_3\t $art", [(int_xtensa_wur_qacc_h_3 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf305;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5522,8 +5522,8 @@ def WUR_QACC_H_4:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_h_4\t $art", [(int_xtensa_wur_qacc_h_4 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf306;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5533,8 +5533,8 @@ def WUR_QACC_L_0:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_l_0\t $art", [(int_xtensa_wur_qacc_l_0 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf307;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5544,8 +5544,8 @@ def WUR_QACC_L_1:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_l_1\t $art", [(int_xtensa_wur_qacc_l_1 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf308;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5555,8 +5555,8 @@ def WUR_QACC_L_2:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_l_2\t $art", [(int_xtensa_wur_qacc_l_2 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf309;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5566,8 +5566,8 @@ def WUR_QACC_L_3:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_l_3\t $art", [(int_xtensa_wur_qacc_l_3 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf30a;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5577,8 +5577,8 @@ def WUR_QACC_L_4:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.qacc_l_4\t $art", [(int_xtensa_wur_qacc_l_4 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf30b;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5588,8 +5588,8 @@ def WUR_SAR_BYTE:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.sar_byte\t $art", [(int_xtensa_wur_sar_byte AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf30d;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5599,8 +5599,8 @@ def WUR_UA_STATE_0:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.ua_state_0\t $art", [(int_xtensa_wur_ua_state_0 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf30f;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5610,8 +5610,8 @@ def WUR_UA_STATE_1:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.ua_state_1\t $art", [(int_xtensa_wur_ua_state_1 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf310;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5621,8 +5621,8 @@ def WUR_UA_STATE_2:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.ua_state_2\t $art", [(int_xtensa_wur_ua_state_2 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf311;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5632,8 +5632,8 @@ def WUR_UA_STATE_3:  EE_Inst24<(outs), (ins AR:$art),
                    "wur.ua_state_3\t $art", [(int_xtensa_wur_ua_state_3 AR:$art)]>, Requires<[HasESP32S3Ops]>
 {
   bits<4> art;
-  
-  
+
+
   let Inst{23-8} = 0xf312;
   let Inst{7-4} = art{3-0};
   let Inst{3-0} = 0x0;
@@ -5644,8 +5644,8 @@ def mv_QR:  EE_Inst24<(outs QR:$a), (ins QR:$b),
 {
   bits<3> a;
   bits<3> b;
-  
-  
+
+
   let Inst{23-22} = 0x2;
   let Inst{21-20} = a{2-1};
   let Inst{19-16} = 0xf;

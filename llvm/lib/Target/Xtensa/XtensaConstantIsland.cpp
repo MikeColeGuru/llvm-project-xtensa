@@ -80,7 +80,7 @@ static cl::opt<int> ConstantIslandsSmallOffset(
     cl::Hidden);
 
 // TODO
-// This defines for L32R and J instruction displacemnt for 
+// This defines for L32R and J instruction displacemnt for
 // testing purposes only
 #define MAX_DISP_L32R 262144
 #define BITS_JUMP 18

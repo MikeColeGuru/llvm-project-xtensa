@@ -458,4 +458,3 @@ void XtensaFixupHwLoops::adjustBlockOffsets(MachineBasicBlock &Start) {
     PrevNum = Num;
   }
 }
-

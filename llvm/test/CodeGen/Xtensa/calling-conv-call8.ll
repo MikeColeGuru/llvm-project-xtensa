@@ -167,4 +167,4 @@ define dso_local void @caller_i128b_3(i128 noundef %0) {
   ret void
 }
 
-declare dso_local void @callee_i128b_3(i32 noundef, i128* noundef byval(i128) align 16) 
+declare dso_local void @callee_i128b_3(i32 noundef, i128* noundef byval(i128) align 16)

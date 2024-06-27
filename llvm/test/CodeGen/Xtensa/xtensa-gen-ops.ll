@@ -6,7 +6,7 @@ FIXTURES = [
     ('add','ae_add32','<1 x i32>'),
     ('add','ae_add32','<2 x i32>'),
     ('add','ae_add16','<4 x i16>'),
-    
+
     ('sub','ae_sub64','<1 x i64>'),
     ('sub','ae_sub32','<1 x i32>'),
     ('sub','ae_sub32','<2 x i32>'),

@@ -28,7 +28,7 @@ protected:
   Tool *buildAssembler() const override;
 
 public:
-  // BareMetal forces to use integrated ASM, we wnat to be more flexible 
+  // BareMetal forces to use integrated ASM, we wnat to be more flexible
   // and allow users to to switch to GNU ASM using command line
   bool useIntegratedAs() const override { return ToolChain::useIntegratedAs(); }
   bool IsIntegratedAssemblerDefault() const override { return IsIntegratedAsm; }

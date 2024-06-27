@@ -21405,4 +21405,3 @@ void test_wur_ae_ts_fts_bu_bp(int art) {
 // CHECK: ret void
  __builtin_xtensa_wur_ae_ts_fts_bu_bp(art);
 }
-

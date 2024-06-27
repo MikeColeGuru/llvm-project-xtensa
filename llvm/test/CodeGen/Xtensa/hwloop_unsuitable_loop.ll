@@ -22,17 +22,17 @@ for.body:                                         ; preds = %entry, %for.body
   %inc = add nuw nsw i32 %i.09, 1
   %cmp = icmp slt i32 %inc, %n
   br i1 %cmp, label %for.body, label %for.cond.cleanup
-; CHECK:.LBB0_2: 
+; CHECK:.LBB0_2:
 ; CHECK:	mov.n	a9, a8
-; CHECK:.LBB0_3: 
+; CHECK:.LBB0_3:
 ; CHECK:	add.n	a2, a9, a2
 ; CHECK:	#APP
 ; CHECK:	#NO_APP
 ; CHECK:	addi.n	a4, a4, -1
 ; CHECK:	beqz  a4, .LBB0_6
-; CHECK:.LBB0_4: 
+; CHECK:.LBB0_4:
 ; CHECK:	bge	a8, a2, .LBB0_2
 
-} 
+}
 
 !2 = !{i32 216}

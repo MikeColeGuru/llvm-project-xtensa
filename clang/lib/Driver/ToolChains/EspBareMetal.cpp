@@ -84,7 +84,7 @@ void EspBareMetal::AddClangCXXStdlibIncludeArgs(const ArgList &DriverArgs,
     return;
 
   BareMetal::AddClangCXXStdlibIncludeArgs(DriverArgs, CC1Args);
-  
+
   // add include path to non-multilib libsdtcxx headers
   if(GetCXXStdlibType(DriverArgs) == ToolChain::CST_Libstdcxx) {
     // computed SysRoot points to clang-runtimes
@@ -282,7 +282,7 @@ void baremetal::esp::Assembler::ConstructJob(Compilation &C, const JobAction &JA
   if (TC.getTriple().getArch() == llvm::Triple::xtensa) {
     StringRef cpu = Args.getLastArgValue(options::OPT_mcpu_EQ, "esp32");
     // xtensa-esp32-elf
-    AsmPrefix = TC.getTriple().getArchName().str() + "-" + cpu.str() + "-" + 
+    AsmPrefix = TC.getTriple().getArchName().str() + "-" + cpu.str() + "-" +
               TC.getTriple().getEnvironmentName().str();
   } else {
     // riscv32-esp-elf
@@ -294,8 +294,8 @@ void baremetal::esp::Assembler::ConstructJob(Compilation &C, const JobAction &JA
       Args.AddAllArgs(CmdArgs, options::OPT_mabi_EQ);
     else
       CmdArgs.push_back("-mabi=ilp32");
-    AsmPrefix = TC.getTriple().getArchName().str() + "-" + 
-              TC.getTriple().getVendorName().str() + "-" + 
+    AsmPrefix = TC.getTriple().getArchName().str() + "-" +
+              TC.getTriple().getVendorName().str() + "-" +
               TC.getTriple().getEnvironmentName().str();
   }
   SmallString<128> Asm(AsmPrefix + "-" + getShortName());
